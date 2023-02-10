@@ -1,43 +1,71 @@
 BACKUP ~vampiretales/backup~
 AUTHOR ~"http://www.chosenofmystra.com"~
 
-AUTO_TRA ~vampiretales/%s~
-LANGUAGE "American English" "american" 
-  ~vampiretales/american/setup.tra~
-  ~vampiretales/american/harper.tra~
-  ~vampiretales/american/comstore.tra~
+ALWAYS	
+
+			//Copies tra files into the autotra-folder (to leave the originals untouched)
+    DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
+      COPY ~vampiretales/language/french~  ~vampiretales/language/autotra/%LANGUAGE%~
+      COPY ~vampiretales/language/%LANGUAGE%~  ~vampiretales/language/autotra/%LANGUAGE%~
+    END
+
+    LAF autotra_workaround END
+
+
+//  ACTION_DEFINE_ARRAY fl#noconvert BEGIN END
+
+ ACTION_DEFINE_ARRAY fl#reload BEGIN setup END
+
+    LAF HANDLE_CHARSETS
+      INT_VAR
+        infer_charsets = 1
+      STR_VAR
+        tra_path = EVAL ~vampiretales/language/autotra~
+//        noconvert_array = fl#noconvert
+        reload_array = fl#reload
+	END
+END
+
+AUTO_TRA ~vampiretales/language/%s~
+
+LANGUAGE ~American English~ ~american~ 
+         ~vampiretales/language/american/setup.tra~
+         ~vampiretales/language/american/harper.tra~
+         ~vampiretales/language/american/comstore.tra~
   
 LANGUAGE ~Espanol (Traducido por Lisandro)~
          ~Spanish~
-         ~vampiretales/Spanish/setup.tra~
-         ~vampiretales/Spanish/harper.tra~
-         ~vampiretales/Spanish/comstore.tra~
+         ~vampiretales/language/Spanish/setup.tra~
+         ~vampiretales/language/Spanish/harper.tra~
+         ~vampiretales/language/Spanish/comstore.tra~
 
 LANGUAGE ~Italian (Translation by ilot)~
          ~italian~
-         ~vampiretales/italian/setup.tra~
-         ~vampiretales/italian/harper.tra~
-         ~vampiretales/italian/comstore.tra~
+         ~vampiretales/language/italian/setup.tra~
+         ~vampiretales/language/italian/harper.tra~
+         ~vampiretales/language/italian/comstore.tra~
          
 LANGUAGE ~French (Translation by Shaywen and Zooloo (of the d'Oghmatiques))~
          ~French~
-         ~vampiretales/french/setup.tra~
-         ~vampiretales/french/harper.tra~
-         ~vampiretales/french/comstore.tra~
+         ~vampiretales/language/french/setup.tra~
+         ~vampiretales/language/french/harper.tra~
+         ~vampiretales/language/french/comstore.tra~
 
 BEGIN @237
+REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee eet~ ~You must have ToB, BGT, BG2:EE or EET installed to install this mod.~
 
 PRINT ~/****************************************~
-PRINT ~*Vampire Tales Version 1.04		*~
+PRINT ~*Vampire Tales Version 2.00		*~
 PRINT ~*http://www.chosenofmystra.com   	*~
 PRINT ~*	Copyright 2012 Dark Raven       *~
-PRINT ~*	FOR USE WITH ToB Version 26498  *~
+PRINT ~*	FOR USE WITH ToB Version 26498 / BG2EE / EET  *~
 PRINT ~*	THIS FILE WILL INSTALL          *~
 PRINT ~*	VAMPIRE TALES IN YOUR BG        *~
 PRINT ~*    II DIRECTORY.                       *~
 PRINT ~*****************************************~
 
-REQUIRE_FILE ~Data/25Dialog.bif~ @238
+//
+INCLUDE ~vampiretales/lib/gw_functions.tpa~
 
 // Copy images
 
@@ -165,25 +193,21 @@ COPY ~vampiretales/cre/CMGMIRI.CRE~ ~Override~
 COPY ~vampiretales/Items/MIRIAMA1.ITM~ ~Override~
   SAY NAME1 @222
   SAY NAME2 @223
-  SAY UNIDENTIFIED_DESC @224
   SAY DESC @225
 
 COPY ~vampiretales/Items/MIRIAMA2.ITM~ ~Override~
   SAY NAME1 @222
   SAY NAME2 @223
-  SAY UNIDENTIFIED_DESC @224
   SAY DESC @226
 
 COPY ~vampiretales/Items/MIRIAMA3.ITM~ ~Override~
   SAY NAME1 @222
   SAY NAME2 @223
-  SAY UNIDENTIFIED_DESC @224
   SAY DESC @227
 
 COPY ~vampiretales/Items/MIRIAMA4.ITM~ ~Override~
   SAY NAME1 @222
   SAY NAME2 @223
-  SAY UNIDENTIFIED_DESC @224
   SAY DESC @228
 
 COPY ~vampiretales/Items/MIRIAMH1.itm~ ~Override~
@@ -213,40 +237,40 @@ COPY ~vampiretales/Items/MIRIAMH6.itm~ ~Override~
 COPY ~vampiretales/items/CMGBOW01.itm~ ~override/CMGBOW01.itm~       
   SAY NAME1 @100 
   SAY NAME2 @101 
-  SAY UNIDENTIFIED_DESC @102  
-  SAY DESC @103 
+  //SAY UNIDENTIFIED_DESC @102  
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@103" END
 
 COPY ~vampiretales/items/CMGHAM02.itm~ ~override/CMGHAM02.itm~       
   SAY NAME1 @104 
   SAY NAME2 @105 
-  SAY UNIDENTIFIED_DESC @106 
-  SAY DESC @107 
+  //SAY UNIDENTIFIED_DESC @106 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@107" END
 
 COPY ~vampiretales/items/CMG1AX01.ITM~ ~override/CMG1AX01.ITM~       
   SAY NAME2 @108 
-  SAY DESC @109 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@109" END 
 
 COPY ~vampiretales/items/CMG1SW02.itm~ ~override/CMG1SW02.itm~       
   SAY NAME1 @110 
   SAY NAME2 @111  
-  SAY UNIDENTIFIED_DESC  @112 
-  SAY DESC @113 
+  //SAY UNIDENTIFIED_DESC  @112 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@113" END 
 
 COPY ~vampiretales/items/CMGCHA01.itm~ ~override/CMGCHA01.itm~       
   SAY NAME1 @114 
   SAY NAME2 @115 
   SAY UNIDENTIFIED_DESC  @116 
-  SAY DESC @117 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@117" END 
 
 COPY ~vampiretales/items/CMGCL01.itm~  ~override/CMGCL01.itm~        
   SAY NAME2 @118 
-  SAY DESC @119 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@119" END 
 
 COPY ~vampiretales/items/GCMSTA01.ITM~ ~override/GCMSTA01.ITM~       
   SAY NAME1 @120 
   SAY NAME2 @121
   SAY UNIDENTIFIED_DESC @122 
-  SAY DESC @123 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@123" END 
 
 COPY ~vampiretales/items/CMGBEL01.itm~ ~override/CMGBEL01.itm~       
   SAY NAME2 @124  
@@ -254,19 +278,19 @@ COPY ~vampiretales/items/CMGBEL01.itm~ ~override/CMGBEL01.itm~
 
 COPY ~vampiretales/items/CMGMAX04.itm~ ~override/CMGMAX04.itm~       
   SAY NAME2 @126 
-  SAY DESC @127 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@127" END 
 
 COPY ~vampiretales/items/CMG2AX04.itm~ ~override/CMG2AX04.itm~       
   SAY NAME1 @128 
   SAY NAME2 @129 
-  SAY UNIDENTIFIED_DESC @130
-  SAY DESC @131 
+  //SAY UNIDENTIFIED_DESC @130
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@131" END
 
 COPY ~vampiretales/items/CMGBOT01.itm~ ~override/CMGBOT01.itm~       
   SAY NAME1 @132 
   SAY NAME2 @133 
  // SAY UNIDENTIFIED_DESC  @134 
-  SAY DESC @135 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@135" END 
 
 COPY ~vampiretales/items/CMGCL04.itm~  ~override/CMGCL04.itm~        
   SAY NAME2 @136 
@@ -276,13 +300,13 @@ COPY ~vampiretales/items/CMGBOW03.ITM~ ~override/CMGBOW03.ITM~
   SAY NAME1 @138 
   SAY NAME2 @139 
  // SAY UNIDENTIFIED_DESC @140
-  SAY DESC @141 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@141" END 
 
 COPY ~vampiretales/items/CMGCL03.ITM~  ~override/CMGCL03.ITM~        
   SAY NAME1 @142 
   SAY NAME2 @143 
  // SAY UNIDENTIFIED_DESC @144 
-  SAY DESC @145
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@145" END
 
 COPY ~vampiretales/items/CMGBRA02.itm~ ~override/CMGBRA02.itm~       
   SAY NAME2 @146 
@@ -290,11 +314,11 @@ COPY ~vampiretales/items/CMGBRA02.itm~ ~override/CMGBRA02.itm~
 
 COPY ~vampiretales/items/CMG1SW07.itm~ ~override/CMG1SW07.itm~       
   SAY NAME2 @148 
-  SAY DESC @149 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@149" END
 
 COPY ~vampiretales/items/CMGDAG02.itm~ ~override/CMGDAG02.itm~       
   SAY NAME2 @150 
-  SAY DESC @151 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@151" END
 
 COPY ~vampiretales/items/CMGVAMP.itm~  ~override/CMGVAMP.itm~        
 
@@ -308,7 +332,7 @@ COPY ~vampiretales/items/CMGRIMYS.ITM~ ~override/CMGRIMYS.ITM~
 
 COPY ~vampiretales/items/CMGFORG2.itm~ ~override/CMGFORG2.itm~       
   SAY NAME2 @153 
-  SAY DESC @154 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@154" END 
 
 COPY ~vampiretales/items/CMGFORG1.ITM~ ~override/CMGFORG1.ITM~       
   SAY NAME1 @155 
@@ -317,7 +341,7 @@ COPY ~vampiretales/items/CMGFORG1.ITM~ ~override/CMGFORG1.ITM~
 
 COPY ~vampiretales/items/CMGFORG3.itm~ ~override/CMGFORG3.itm~       
   SAY NAME2 @158 
-  SAY DESC @159 
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@159" END 
 
 COPY ~vampiretales/items/CMGFORG4.ITM~ ~override/CMGFORG4.ITM~       
   SAY NAME2 @160 
@@ -326,24 +350,24 @@ COPY ~vampiretales/items/CMGFORG4.ITM~ ~override/CMGFORG4.ITM~
 COPY ~vampiretales/items/CMG2AX05.ITM~ ~override/CMG2AX05.ITM~       
   SAY NAME1 @128 
   SAY NAME2 @162 
-  SAY UNIDENTIFIED_DESC  @130 
-  SAY DESC @163 
+  //SAY UNIDENTIFIED_DESC  @130
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@163" END
 
 COPY ~vampiretales/items/CMGFORG5.ITM~ ~override/CMGFORG5.ITM~       
   SAY NAME2 @164 
-  SAY DESC @165
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@165" END
 
 COPY ~vampiretales/items/CMGFORG6.ITM~ ~override/CMGFORG6.ITM~       
   SAY NAME2 @166 
-  SAY DESC @167
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@167" END
 
 COPY ~vampiretales/items/CMGFORG7.ITM~ ~override/CMGFORG7.ITM~       
   SAY NAME2 @168 
-  SAY DESC @169
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@169" END
 
 COPY ~vampiretales/items/CMGFORG8.ITM~ ~override/CMGFORG8.ITM~       
   SAY NAME2 @170 
-  SAY DESC @171
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@171" END
 
 COPY ~vampiretales/items/CMGFORG9.ITM~ ~override/CMGFORG9.ITM~       
   SAY NAME2 @172 
@@ -351,7 +375,7 @@ COPY ~vampiretales/items/CMGFORG9.ITM~ ~override/CMGFORG9.ITM~
 
 COPY ~vampiretales/items/CMGFOR10.ITM~ ~override/CMGFOR10.ITM~       
   SAY NAME2 @174 
-  SAY DESC @175
+  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@175" END
 
 // Other
 
@@ -499,31 +523,31 @@ COPY	~vampiretales/comstore/bams~ ~override~
 
 COPY    ~vampiretales/comstore/items/gcma01.itm~   ~override/gcma01.itm~ SAY NAME2 @1 SAY DESC @2
 
-COPY    ~vampiretales/comstore/items/gcma02.itm~   ~override/gcma02.itm~ SAY NAME2 @3 SAY DESC @4
+COPY    ~vampiretales/comstore/items/gcma02.itm~   ~override/gcma02.itm~ SAY NAME2 @3 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
 
-COPY    ~vampiretales/comstore/items/gcmar01.itm~   ~override/gcmar01.itm~ SAY NAME2 @5 SAY DESC @6
+COPY    ~vampiretales/comstore/items/gcmar01.itm~   ~override/gcmar01.itm~ SAY NAME2 @5 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@6" END
 
-COPY    ~vampiretales/comstore/items/gcmar02.itm~   ~override/gcmar02.itm~ SAY NAME2 @7 SAY DESC @8
+COPY    ~vampiretales/comstore/items/gcmar02.itm~   ~override/gcmar02.itm~ SAY NAME2 @7 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@8" END
 
-COPY    ~vampiretales/comstore/items/gcmax01.itm~   ~override/gcmax01.itm~ SAY NAME2 @9 SAY DESC @10
+COPY    ~vampiretales/comstore/items/gcmax01.itm~   ~override/gcmax01.itm~ SAY NAME2 @9 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@10" END
 
-COPY    ~vampiretales/comstore/items/gcmax02.itm~   ~override/gcmax02.itm~ SAY NAME2 @11 SAY DESC @12
+COPY    ~vampiretales/comstore/items/gcmax02.itm~   ~override/gcmax02.itm~ SAY NAME2 @11 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@12" END
 
-COPY    ~vampiretales/comstore/items/gcmax03.itm~   ~override/gcmax03.itm~ SAY NAME2 @13 SAY DESC @14
+COPY    ~vampiretales/comstore/items/gcmax03.itm~   ~override/gcmax03.itm~ SAY NAME2 @13 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@14" END
 
-COPY    ~vampiretales/comstore/items/gcmch01.itm~   ~override/gcmch01.itm~ SAY NAME2 @15 SAY DESC @16
+COPY    ~vampiretales/comstore/items/gcmch01.itm~   ~override/gcmch01.itm~ SAY NAME2 @15 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@16" END
 
-COPY    ~vampiretales/comstore/items/gcmha01.itm~   ~override/gcmha01.itm~ SAY NAME2 @17 SAY DESC @18
+COPY    ~vampiretales/comstore/items/gcmha01.itm~   ~override/gcmha01.itm~ SAY NAME2 @17 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@18" END
 
-COPY    ~vampiretales/comstore/items/gcmham01.itm~   ~override/gcmham01.itm~ SAY NAME2 @19 SAY DESC @20
+COPY    ~vampiretales/comstore/items/gcmham01.itm~   ~override/gcmham01.itm~ SAY NAME2 @19 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@20" END
 
-COPY    ~vampiretales/comstore/items/gcmpl01.itm~   ~override/gcmpl01.itm~ SAY NAME2 @21 SAY DESC @22
+COPY    ~vampiretales/comstore/items/gcmpl01.itm~   ~override/gcmpl01.itm~ SAY NAME2 @21 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@22" END
 
-COPY    ~vampiretales/comstore/items/gcmri01.itm~   ~override/gcmri01.itm~ SAY NAME2 @23 SAY DESC @24
+COPY    ~vampiretales/comstore/items/gcmri01.itm~   ~override/gcmri01.itm~ SAY NAME2 @23 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@24" END
 
-COPY    ~vampiretales/comstore/items/gcms1h01.itm~   ~override/gcms1h01.itm~ SAY NAME2 @25 SAY DESC @26
+COPY    ~vampiretales/comstore/items/gcms1h01.itm~   ~override/gcms1h01.itm~ SAY NAME2 @25 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@26" END
 
-COPY    ~vampiretales/comstore/items/gcmsh01.itm~   ~override/gcmsh01.itm~ SAY NAME2 @27 SAY DESC @28
+COPY    ~vampiretales/comstore/items/gcmsh01.itm~   ~override/gcmsh01.itm~ SAY NAME2 @27 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@28" END
 
 // COPY    ~vampiretales/comstore/items/gcmsh02.itm~   ~override/gcmsh02.itm~ SAY NAME2 @29 SAY DESC @30
 

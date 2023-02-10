@@ -94,14 +94,14 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("MirSunLight","LOCALS")
+	!GlobalTimerNotExpired("CMG_MiriamSunLight","LOCALS")
 	AreaType(OUTDOOR)
 	AreaType(DAYNIGHT)
 	!TimeOfDay(NIGHT)
 THEN
 	RESPONSE #100
-		ReallyForceSpellRES("MIRIAM",Myself) // Blighted by the MirSunLight
-		SetGlobalTimer("MirSunLight","LOCALS",60)
+		ReallyForceSpellRES("MIRIAM",Myself) // Blighted by the SunLight
+		SetGlobalTimer("CMG_MiriamSunLight","LOCALS",60)
 END
 
 IF

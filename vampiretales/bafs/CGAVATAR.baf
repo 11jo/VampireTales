@@ -1,39 +1,39 @@
 IF
 	HPPercentLT(Myself,50)
-	Global("AvatarHeal","LOCALS",0)
+	Global("CMG_AvatarHeal","LOCALS",0)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,CLERIC_HEAL)
-		SetGlobal("AvatarProt","LOCALS",0)
-		SetGlobal("AvatarHeal","LOCALS",1)
+		SetGlobal("CMG_AvatarProt","LOCALS",0)
+		SetGlobal("CMG_AvatarHeal","LOCALS",1)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",0)
+	Global("CMG_AvatarProt","LOCALS",0)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,WIZARD_STONE_SKIN)
 		ApplySpell(Myself,WIZARD_ABSOLUTE_IMMUNITY)
 		ApplySpell(Myself,WIZARD_PROTECTION_FROM_THE_ELEMENTS)
-		SetGlobal("AvatarProt","LOCALS",1)
+		SetGlobal("CMG_AvatarProt","LOCALS",1)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",1)
+	Global("CMG_AvatarProt","LOCALS",1)
 	CheckStatGT(NearestEnemyOf(Myself),26,RESISTMAGIC)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,WIZARD_TIME_STOP)
 		ForceSpell(Myself,WIZARD_MORDENKAINENS_SWORD)
 		ForceSpell(Myself,WIZARD_MORDENKAINENS_SWORD)
-		SetGlobal("AvatarProt","LOCALS",2)
+		SetGlobal("CMG_AvatarProt","LOCALS",2)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",1)
+	Global("CMG_AvatarProt","LOCALS",1)
 	HPLT(LastSeenBy(Myself),60)
 THEN
 	RESPONSE #100
@@ -42,7 +42,7 @@ END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",1)
+	Global("CMG_AvatarProt","LOCALS",1)
 	HPGT(LastSeenBy(Myself),61)
 	CheckStatGT(LastSeenBy(Myself),5,0)
 THEN
@@ -52,88 +52,88 @@ END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",1)
+	Global("CMG_AvatarProt","LOCALS",1)
 THEN
 	RESPONSE #100
 		ForceSpell(LastSeenBy(Myself),DEMILICH_TRAP_SOUL)
-		SetGlobal("AvatarProt","LOCALS",15)
+		SetGlobal("CMG_AvatarProt","LOCALS",15)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",15)
+	Global("CMG_AvatarProt","LOCALS",15)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,WIZARD_MORDENKAINENS_SWORD)
-		SetGlobal("AvatarProt","LOCALS",16)
+		SetGlobal("CMG_AvatarProt","LOCALS",16)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",16)
+	Global("CMG_AvatarProt","LOCALS",16)
 THEN
 	RESPONSE #100
 		ForceSpell(LastSeenBy(Myself),WIZARD_TIME_STOP)
-		SetGlobal("AvatarProt","LOCALS",17)
+		SetGlobal("CMG_AvatarProt","LOCALS",17)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",17)
+	Global("CMG_AvatarProt","LOCALS",17)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,WIZARD_MORDENKAINENS_SWORD)
-		SetGlobal("AvatarProt","LOCALS",18)
+		SetGlobal("CMG_AvatarProt","LOCALS",18)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",18)
+	Global("CMG_AvatarProt","LOCALS",18)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,WIZARD_MORDENKAINENS_SWORD)
-		SetGlobal("AvatarProt","LOCALS",19)
+		SetGlobal("CMG_AvatarProt","LOCALS",19)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",19)
+	Global("CMG_AvatarProt","LOCALS",19)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,WIZARD_IMPROVED_HASTE)
-		SetGlobal("AvatarProt","LOCALS",20)
+		SetGlobal("CMG_AvatarProt","LOCALS",20)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",20)
+	Global("CMG_AvatarProt","LOCALS",20)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,WIZARD_PHANTOM_BLADE)
-		SetGlobal("AvatarProt","LOCALS",21)
+		SetGlobal("CMG_AvatarProt","LOCALS",21)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",21)
+	Global("CMG_AvatarProt","LOCALS",21)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,WIZARD_TENSERS_TRANSFORMATION)
-		SetGlobal("AvatarProt","LOCALS",22)
+		SetGlobal("CMG_AvatarProt","LOCALS",22)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",22)
+	Global("CMG_AvatarProt","LOCALS",22)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,WIZARD_BLACK_BLADE_OF_DISASTER)
-		SetGlobal("AvatarProt","LOCALS",23)
+		SetGlobal("CMG_AvatarProt","LOCALS",23)
 END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",23)
+	Global("CMG_AvatarProt","LOCALS",23)
 THEN
 	RESPONSE #100
 		AttackReevaluate(NearestEnemyOf(Myself),30)
@@ -141,7 +141,7 @@ END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",1)
+	Global("CMG_AvatarProt","LOCALS",1)
 THEN
 	RESPONSE #100
 		ForceSpell(LastSeenBy(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
@@ -149,7 +149,7 @@ END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",2)
+	Global("CMG_AvatarProt","LOCALS",2)
 	CheckStatGT(LastSeenBy(Myself),26,RESISTMAGIC)
 THEN
 	RESPONSE #100
@@ -158,7 +158,7 @@ END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",2)
+	Global("CMG_AvatarProt","LOCALS",2)
 	CheckStatGT(LastSeenBy(Myself),5,0)
 	!HasBounceEffects(LastSeenBy(Myself))
 THEN
@@ -170,7 +170,7 @@ END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",2)
+	Global("CMG_AvatarProt","LOCALS",2)
 	CheckStatGT(LastSeenBy(Myself),17,INT)
 	Global("DemiWizd","LOCALS",0)
 	HPLT(LastSeenBy(Myself),70)
@@ -182,7 +182,7 @@ END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",2)
+	Global("CMG_AvatarProt","LOCALS",2)
 	HPGT(LastSeenBy(Myself),60)
 	CheckStatLT(LastSeenBy(Myself),26,RESISTMAGIC)
 THEN
@@ -192,7 +192,7 @@ END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",2)
+	Global("CMG_AvatarProt","LOCALS",2)
 	CheckStatLT(LastSeenBy(Myself),36,RESISTFIRE)
 	CheckStatLT(LastSeenBy(Myself),26,RESISTMAGIC)
 	HPGT(LastSeenBy(Myself),60)
@@ -203,7 +203,7 @@ END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Global("AvatarProt","LOCALS",2)
+	Global("CMG_AvatarProt","LOCALS",2)
 	HPLT(LastSeenBy(Myself),60)
 THEN
 	RESPONSE #100
@@ -217,5 +217,5 @@ IF
 		StateCheck(LastSeenBy(Myself),STATE_PANIC)
 THEN
 	RESPONSE #100
-		SetGlobal("AvatarProt","LOCALS",0)
+		SetGlobal("CMG_AvatarProt","LOCALS",0)
 END

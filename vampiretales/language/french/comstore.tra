@@ -1,0 +1,268 @@
+@1 = ~Symbole de Corellon Larethian~
+
+@2 = ~Ce symbole magique du dieu elfique Corellon Larethian fut offert à plusieurs combattants de la Main de la Seldarine. C'est un souvenir du combat épique que Corellon livra face à Gruumsh Œil-Unique. Toute personne portant cet objet voit sa puissance augmenter, en particulier contre les orques.
+
+PARAMETRES :
+
+TAC0 : +2~
+
+@3 = ~Fermoir de la cape de Bron~
+
+@4 = ~Ce talisman était le fermoir de la cape portée par un guerrier particulièrement coriace connu sous le nom de Bron Balhon. Il aurait dû trouver la mort une bonne dizaine de fois au cours de sa vie. Ses ennemis le criblèrent de carreaux d'arbalète et jetèrent son corps lesté à la mer et pourtant, ils périrent de sa main un mois plus tard, dans une taverne située à des dizaines de lieues de là. Une autre fois, Bron fut lâchement abandonné par ses compagnons alors qu'ils étaient attaqués par une meute de loups noirs. Mais deux semaines plus tard, il reparut triomphant au campement, vêtu des peaux de ces mêmes loups. Que les récits sur Bron soient vrais ou non, on pense que ce dernier trouva réellement la mort dans l'Epine Dorsale du Monde, en combattant des vers polaires.
+
+PARAMETRES :
+
+5 % de résistance aux dégâts tranchants, perforants et aux projectiles.
+Non utilisable par :~
+
+@5 = ~Flèches de confusion +3~
+
+@6 = ~Ces flèches sont de très bonne facture, et l'on distingue de minuscules runes gravées sur leur surface. Il est clair que leur fabrication demanda beaucoup d'efforts et bien que ça ne soit pas visible au premier coup d'œil, en les examinant de plus près, on remarque qu'une faible lueur bleutée émane des runes.
+
+PARAMETRES :
+
+Spécial :
+ 10 % de chance de rendre la cible confuse
+
+TAC0 : +3 
+Dégâts : 1d6 +3 
+Type de dégâts : projectile (perforants)
+Poids :  0
+Non utilisable par :
+ Clerc
+ Druide
+ Mage~
+
+@7 = ~Flèches de congélation +3~
+
+@8 = ~Cette flèche de glace est enchantée de sorte qu'elle explose en une boule glaciale lorsqu'elle atteint sa cible. Le corps de cette dernière, au moment de l'impact, est traversé par une onde glaciale qui brûle et engourdit jusqu'à la moelle de ses os.
+
+PARAMETRES :
+
+Spécial :
+ 1d2 points de dégâts de froid supplémentaires (pas de sauvegarde)
+ 15 % de chance que la cible meure gelée
+
+Dégâts : 1d6 +3
+Type de dégâts : projectile (perforants)
+Poids : 0
+Non utilisable par :
+ Clerc
+ Druide
+ Mage~
+
+@9 = ~La Lame de Célébration~
+
+@10 = ~Cette splendide hache a été forgée avec application par Briath Maindargent, maître-artisan et serviteur dévoué de Moradin. Briath créa cette arme pour célébrer l'achèvement d'un monument érigé à la gloire de son dieu, le père de la race des nains. Il la plaça dans le monument, au cas où un héros en ait besoin à l'avenir pour libérer Profondorn.
+
+PARAMETRES :
+
+TAC0 : +4
+Dégâts : 1d8 +4
+Type de dégâts : tranchants
+Poids : 5
+Facteur de vitesse : 3
+Type de compétence : hache
+Type : arme à 1 main
+Non utilisable par :
+ Druide
+ Clerc
+ Mage
+ Voleur~
+
+@11 = ~Route de la Solitude~
+
+@12 = ~Cette arme était celle d'un homme maudit, condamné à errer sur Toril pour ses crimes commis contre les elfes de Myth Drannor. Denell Harband faisait partie de ceux qui ont tracé la "Piste des Haches". Sous les ordres de son commandant, Halvan le Noir, il abattit de nombreux arbres de la forêt elfique, malgré les protestations et les assauts répétés des maîtres des lieux. Quand les elfes le capturèrent enfin, il clama son innocence en prétextant qu'il ne faisait qu'obéir aux ordres. Le conseil des elfes décréta que Denell devait être soumis à un sort de Quête qui l'obligerait à transporter sa hache de la côte des Epées jusqu'aux lointaines frontières orientales et au Grand Glacier du Lurien. L'errance de Denell dura trente longues années. Quand elle s'acheva enfin, il était devenu un combattant aguerri. Alors qu'il rentrait chez lui, il passa par le Valherse, où il découvrit une statue en bois d'Halvan le Noir fièrement dressée sur la place d'une petite ville. D'un coup terrible, il planta sa hache dans le crâne d'Halvan. Puis, sans s'arrêter, il retourna à sa cabane, où il vécut en fermier reclus.
+
+PARAMETRES :
+
+Spécial :
+ +1 en constitution 
+
+TAC0 : +3
+Dégâts : 1d10 +3
+Type de dégâts : tranchants
+Poids : 10
+Facteur de vitesse : 6
+Type de compétence : hache
+Type : arme à 2 mains
+Non utilisable par :
+ Druide
+ Clerc
+ Mage
+ Voleur~
+
+@13 = ~Tranchefeu~
+
+@14 = ~Cette arme est la création d'un derro d'Ombreterre qui avait un don particulier lui permettant d'incorporer le pouvoir du feu dans toutes les armes qu'il forgeait. Selon les rumeurs, il aurait trouvé la mort dans les terres gelées du Nord.
+
+PARAMETRES :
+
+Capacité de combat :
+ 2d4 points de dégâts de feu supplémentaires
+
+TAC0 : +3
+Dégâts : 3d6 +3
+Type de dégâts (mêlée) : tranchants
+Type de dégâts (lancer) : projectile (perforants)
+Spécial :
+ Revient dans les mains du lanceur à chaque jet
+Poids : 2
+Facteur de vitesse : 1
+Type de compétence : hache
+Type : arme à 1 main
+Non utilisable par :
+ Personnages d'alignement bon
+ Druide
+ Clerc
+ Mage
+ Voleur~
+
+@15 = ~Cotte de mailles elfique de la Main +3~
+
+@16 = ~Durant l'Âge d'or des elfes de la Main de la Seldarine et des nains de Profondorn, des exemplaires spéciaux des célèbres cottes de mailles elfiques furent forgées. Elles étaient dotées de protections supplémentaires destinées à protéger le porteur des rudes conditions climatiques du Nord.
+
+PARAMETRES :
+
+Spécial :
+ +20 % de résistance au froid
+
+Classe d'armure : 2
+Poids : 15
+Non utilisable par :
+ Druide
+ Mage~
+
+@17 = ~Hallebarde +3 : Fléau d'Aurile~
+
+@18 = ~Le Fléau d'Aurile est l'arme favorite des gardes des temples d'Aurile. On les trouve généralement dans les régions glaciaires du Nord.
+
+PARAMETRES :
+
+Spécial :
+ 10 % de chance de geler la cible à chaque coup réussi
+
+TAC0 : +3 
+Dégâts : 1d10 +3, +1d3 points de dégâts de froid
+Type de dégâts : perforants
+Poids : 12
+Facteur de vitesse : 4
+Type de compétence : hallebarde
+Type:  arme à 2 mains
+Force nécessaire : 13
+Non utilisable par :
+ Druide
+ Clerc
+ Mage
+ Voleur~
+
+@19 = ~Marteau du Seigneur des Tempêtes +3~
+
+@20 = ~On appelle aussi cette arme le "Marteau des tempêtes". Gilgeam, un Haut prêtre de Talos, vénérait la foudre à tel point qu'il la "captura" afin d'enchanter son marteau de guerre. Il se crut alors si puissant qu'il partit défier une horde d'un millier d'orques. Il perdit cette bataille, et sa vie.
+
+PARAMETRES :
+
+Spécial :
+ +15 % de résistance à l'électricité
+ 
+TAC0 : +3 
+Dégâts : 2d4 +3, +2d4 points de dégâts électriques
+Type de dégâts : contondants
+Poids : 4
+Facteur de vitesse : 1
+Type de compétence : marteau de guerre
+Type : arme à 1 main
+Force nécessaire : 18
+Non utilisable par :
+ Druide
+ Mage
+ Voleur~
+
+@21 = ~Armure Sanglante~
+
+@22 = ~Kheros le rouge porta cette armure de plates de couleur rouge sang durant les nombreuses années où il combattit aux côtés des prêtres de l'ordre de Tempus. Il était le fils d'un humble fermier de Calaunt. Dans sa jeunesse, il quitta sa ville natale pour devenir mercenaire et après un certain nombre de succès, Kheros enchaîna de courtes quêtes auprès de divers groupes d'aventuriers. Mais, malgré de nombreuses victoires, le dégoût du combat envahit Kheros et il ne supporta bientôt plus la vue du sang, qui le terrifiait. 
+Il perdit le contrôle sur cette peur, et elle le consuma jusqu'à la folie. Des prêtres de Tempus trouvèrent alors le guerrier et lui portèrent assistance. Ils espéraient pouvoir le guérir de sa peur. Au fil des années passées à leurs cotés, Kheros se convertit à cette religion et devint prêtre lui aussi. La dernière épreuve qu'il dut franchir afin de surmonter sa peur fut d'être immergé dans une cuve de sang, jusqu'à la limite de la noyade. Pendant ces longues minutes, il ne flancha pas et ne se débattit même pas. Quelques années plus tard, il fit forger cette armure en souvenir de son passé...
+
+PARAMETRES :
+
+Classe d'armure : -1
+Poids : 55
+Non utilisable par :
+ Druide
+ Mage
+ Voleur
+ Barde~
+
+@23 = ~Anneau des Arcanes de Kontik~
+
+@24 = ~Kontik, un puissant magicien au service d'Aurile, s'empara de cet anneau après avoir vaincu Nill l'Infernal, un archimage spécialisé dans la maîtrise du feu. Nill avait passé cinq ans à créer ce puissant anneau qui lui fut d'une grande utilité durant ses voyages. Malheureusement pour lui, l'objet n'était pas assez puissant pour contrer les sorts et les sbires de Kontik. L'anneau fut forgé à partir d'un étrange métal gris-blanc appelé tungstène.
+
+PARAMETRES :
+
+Double la quantité de sorts mémorisables des niveaux 1 et 2
+Utilisable par :
+ Mage~
+
+@25 = ~La lame de la Vierge de Gel~
+
+@26 = ~Les seules parties matérielles de cette épée de glace sont sa garde, sa poignée et son pommeau, tous trois faits d'argent et d'acier. Elle fut créée en 1099 CV par Ihanora la Miséricordieuse, une fidèle servante d'Aurile. Ihanora sévissait dans le nord, attaquant tous ceux qui cherchaient à se protéger du froid. A la tête d'une armée hétéroclite composée de yétis, de vers polaires, de géants de givre, et d'un dragon blanc, elle gelait tout sur son passage. Elle fut vaincue en 1108 CV par la célèbre Brigade des Masques Rouges, dirigée par un tueur impitoyable, Harley le Rancunier.
+
+PARAMETRES :
+
+Spécial :
+ 2 % de chance de geler la cible
+
+TAC0 : +2
+Dégâts : 2d4 +2
+Type de dégâts : froid
+Poids : 10
+Facteur de vitesse : 6
+Type de compétence : épée large
+Type : arme à 1 main
+Non utilisable par :
+ Druide
+ Clerc
+ Mage
+ Voleur~
+
+@27 = ~Le Bouclier d'Argent~
+
+@28 = ~Ce bouclier en argent se trouvait à l'intérieur de la Main de la Seldarine. Il protégeait son porteur contre la magie et les attaques physiques. Incapables de l'utiliser, orques et gobelins l'ont laissé dans la tour, où la Vierge Ilmadia l'a récupéré.
+
+PARAMETRES  :
+
+Spécial :
+ +25 % de résistance à la magie
+
+Classe d'amure : +3
+Poids : 5
+Utilisable par :
+ Elfe
+ Demi-elfe
+Non utilisable par :
+ Druide
+ Voleur
+ Mage
+ Barde~
+
+@29 = ~Grand bouclier de froid +4~
+
+@30 = ~Provenant du “Nord gelé”, cet imposant bouclier protège contre le blizzard des régions du nord.
+
+PARAMETRES :
+
+Spécial :
+ +20 % de résistance au froid
+ +1 contre les projectiles
+
+Bonus à la classe d'armure : +3
+Poids : 4
+Force nécessaire : 10
+Non utilisable par :
+ Barde
+ Druide
+ Mage
+ Voleur~
+
+@31 = ~Asgrim l'Aliéné~
+@32 = ~Articles d'Asgrim~

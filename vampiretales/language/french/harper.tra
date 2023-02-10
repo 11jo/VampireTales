@@ -1,0 +1,48 @@
+@2000 = ~Anneau du destin~ 
+@2001 = ~L'Anneau du Destin est immunisé au passage du temps. Ceci dit, l'Anneau du Destin immunise son porteur aux effets des sorts d'Arrêt du temps.
+
+PARAMETRES :
+
+Immunité à Arrêt du temps
+-20 aux points de vie
+-2 en dextérité~ 
+    
+@2002 = ~Hache d'armes~ 
+@2003 = ~Hache d'armes +4 "Frappe ardente"~ 
+@2004 = ~La version la plus répandue de la hache d'armes est une grande hampe d'environ 1,80 mètre de long comportant une lame à un seul tranchant et en forme de trompette montée sur une extrémité.
+
+PARAMETRES :
+
+Dégâts : 1d10
+Type de dégâts : tranchants
+Poids : 7
+Facteur de vitesse : 7
+Type de compétence : hache
+Type : arme à 1 main
+Force nécessaire : 10
+Non utilisable par :
+ Druide
+ Clerc
+ Mage 
+ Voleur~
+ 
+@2005 = ~Les haches de frappe adente sont très peu courantes, car très peu d'exemplaires ont été forgés. Les rumeurs avancent que leur créateur était un survivant de la ville perdue de Néthéril.
+
+PARAMETRES :
+
++10 % de résistance au feu
+Chance de drainer un niveau à chaque coup réussi
+
+TAC0 : +4 
+Dégâts : 1d10 +4, +1d4 dégâts supplémentaires de feu
+Type de dégâts : perforants
+Poids : 12
+Facteur de vitesse : 9
+Type de competence : hallebarde
+Type : arme à 2 mains
+Force nécessaire : 13
+Non utilisable par :
+ Druide
+ Clerc
+ Mage
+ Voleur~
