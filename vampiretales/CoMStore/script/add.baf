@@ -1,0 +1,7 @@
+IF
+	Global("MakeAsgrim","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("gcmdwar1",[1225.617],0) // Asgrim the Insane
+		SetGlobal("MakeAsgrim","GLOBAL",1)
+END
