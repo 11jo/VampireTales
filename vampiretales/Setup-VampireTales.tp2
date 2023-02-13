@@ -1,11 +1,13 @@
 BACKUP ~vampiretales/backup~
 AUTHOR ~"http://www.chosenofmystra.com"~
 
+README ~vampiretales/README.html~
+
 ALWAYS	
 
 			//Copies tra files into the autotra-folder (to leave the originals untouched)
     DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
-      COPY ~vampiretales/language/french~  ~vampiretales/language/autotra/%LANGUAGE%~
+      COPY ~vampiretales/language/american~  ~vampiretales/language/autotra/%LANGUAGE%~
       COPY ~vampiretales/language/%LANGUAGE%~  ~vampiretales/language/autotra/%LANGUAGE%~
     END
 
@@ -14,7 +16,7 @@ ALWAYS
 
 //  ACTION_DEFINE_ARRAY fl#noconvert BEGIN END
 
- ACTION_DEFINE_ARRAY fl#reload BEGIN setup END
+ ACTION_DEFINE_ARRAY fl#reload BEGIN setup harper comstore END
 
     LAF HANDLE_CHARSETS
       INT_VAR
@@ -26,7 +28,7 @@ ALWAYS
 	END
 END
 
-AUTO_TRA ~vampiretales/language/%s~
+AUTO_TRA ~vampiretales/language/autotra/%s~
 
 LANGUAGE ~American English~ ~american~ 
          ~vampiretales/language/american/setup.tra~
@@ -423,43 +425,46 @@ COMPILE
 
 
 COMPILE ~vampiretales/dlg/bcmgmi25.d~
-   USING ~vampiretales/%s/bcmgmi25.tra~
+   USING ~vampiretales/language/autotra/%s/bcmgmi25.tra~
 
 COMPILE ~vampiretales/dlg/bcmgmiri.d~
-    USING ~vampiretales/%s/bcmgmiri.tra~
+    USING ~vampiretales/language/autotra/%s/bcmgmiri.tra~
 
 COMPILE ~vampiretales/dlg/cmgmi25.d~
-   USING ~vampiretales/%s/cmgmi25.tra~
+   USING ~vampiretales/language/autotra/%s/cmgmi25.tra~
 
 COMPILE ~vampiretales/dlg/cmgmi25j.d~
-   USING ~vampiretales/%s/cmgmi25j.tra~
+   USING ~vampiretales/language/autotra/%s/cmgmi25j.tra~
 
 COMPILE ~vampiretales/dlg/cmgmiri.d~
-   USING ~vampiretales/%s/cmgmiri.tra~
+   USING ~vampiretales/language/autotra/%s/cmgmiri.tra~
 
 COMPILE ~vampiretales/dlg/cmgmirij.d~
-   USING ~vampiretales/%s/cmgmirij.tra~
+   USING ~vampiretales/language/autotra/%s/cmgmirij.tra~
 
 COMPILE ~vampiretales/dlg/cmgmirip.d~
-   USING ~vampiretales/%s/cmgmirip.tra~
+   USING ~vampiretales/language/autotra/%s/cmgmirip.tra~
 
 COMPILE ~vampiretales/dlg/cmgblood.d~       
-  USING ~vampiretales/%s/cmgblood.tra~
+  USING ~vampiretales/language/autotra/%s/cmgblood.tra~
 
 COMPILE ~vampiretales/dlg/cmlilith.d~       
-  USING ~vampiretales/%s/cmlilith.tra~
+  USING ~vampiretales/language/autotra/%s/cmlilith.tra~
 
 COMPILE ~vampiretales/dlg/cmmarial.d~       
-  USING ~vampiretales/%s/cmmarial.tra~
+  USING ~vampiretales/language/autotra/%s/cmmarial.tra~
 
 COMPILE ~vampiretales/dlg/cmgratav.d~       
-  USING ~vampiretales/%s/cmgratav.tra~
+  USING ~vampiretales/language/autotra/%s/cmgratav.tra~
 
 //COMPILE ~vampiretales/dlg/aabanter.d~       
-//  USING ~vampiretales/%s/aabanter.tra~
+//  USING ~vampiretales/language/autotra/%s/aabanter.tra~
 
 COMPILE ~vampiretales/dlg/drvamps.d~
-  USING ~vampiretales/%s/drvamps.tra~
+  USING ~vampiretales/language/autotra/%s/drvamps.tra~
+  
+COMPILE ~vampiretales/comstore/dlg/asgrim.d~       
+  USING ~vampiretales/language/autotra/%s/asgrim.tra~
 
 // Beginning of .2DA patching
 
@@ -475,9 +480,6 @@ UNLESS ~CMGMIRIAM~
 //IF     ~25FILE~
 
 // End of .2DA patching
-
-
-AT_INTERACTIVE_EXIT ~VIEW vampiretales\README.html~
 
 // /////////////////
 // Improved Cult
@@ -557,10 +559,7 @@ COPY	~vampiretales/comstore/cre/gcmdwar1.cre~	~override/gcmdwar1.cre~	SAY NAME1 
 EXTEND_TOP ~ar0406.bcs~ ~vampiretales/comstore/script/add.baf~
 COPY    ~vampiretales/comstore/store/gcmstore.sto~     ~override/gcmstore.sto~
   SAY 0xc @32
-COMPILE ~vampiretales/comstore/dlg/asgrim.d~       
-  USING ~vampiretales/%s/asgrim.tra~
 
-AT_INTERACTIVE_EXIT ~VIEW vampiretales\README.html~
 
 
 
