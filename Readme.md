@@ -1,6 +1,6 @@
 # Vampire Tales
 
-![Language](https://img.shields.io/static/v1?label=language&message=english%20%7C%20french%20%7C%20&colorspanish%20%7C%20&coloritalian%20%7C%20&color=informational)
+![Language](https://img.shields.io/static/v1?label=language&message=english%20%7C%20french%20%7C%20spanish%20%7C%20italian%20%7C%20&color=informational)
 
 **Autor** : **Dark Raven**
 
@@ -87,61 +87,61 @@ A: Originally this mod was Dark Ritual and Miriam as seperate mods. I combined t
 
 - Version 2.00 (February, 2023)
 
-    CHANGES
-    BG2EE / EET compatibility
-		- Use some files of BG2EE version by Com_Solaufein (GCMDWAR1.cre, CGAVATAR.baf, CMGMIRI.baf, MIRIAMH 1 à 6 .itm)  
-		- Handle Charset and iconV for keep oBG2 compatibility  
-		- gw_functions.tpa (update description for EE) from Freddy_Gwendo for keep oBG2 compatibility  
-		- Move files and folder tra in language folder / Portraits to EE or Vanilla folders  
-		- Change to tp2  
-		- Add Readme.md  
-		- Up Readme.html  
+    CHANGES      
+	- BG2EE / EET compatibility  
+	- Use some files of BG2EE version by Com_Solaufein (GCMDWAR1.cre, CGAVATAR.baf, CMGMIRI.baf, MIRIAMH 1 à 6 .itm)  
+	- Handle Charset and iconV for keep oBG2 compatibility  
+	- gw_functions.tpa (update description for EE) from Freddy_Gwendo for keep oBG2 compatibility  
+	- Move files and folder tra in language folder / Portraits to EE or Vanilla folders  
+	- Change to tp2  
+	- Add Readme.md  
+	- Up Readme.html  
 
-    BUGFIXES
+    BUGFIXES    
     Using last BG2EE version of files
 	
 - Version 1.04 / 1.05 (October 16, 2016) / (August 30, 2014)
 
-    CHANGES
+    CHANGES  
     Added French translation thanks to Shaywen and Zooloo (of the d'Oghmatiques)
 
-    BUGFIXES
+    BUGFIXES    
 	Fixed some grammar errors.
     Miriam's claws were droppable, which they are not suppose to be. Fixed.
 
 - Version 1.03 (December 22, 2012)
 
-    CHANGES
+    CHANGES  
     None
 
-    BUGFIXES
+    BUGFIXES    
     GCMRI01.itm 
 	- Used to SET your damage to 15% (the item tries to implement a bonus to cold damage that isn't possible in vanilla BGII-ToB) Now provides a flat +15% damage... ALL DAMAGE
     - Doubled level 2 spells and QUADRUPLED level 1 spells. Now only doubles
 
 - Version 1.02 (April 30, 2011)
 
-    CHANGES
+    CHANGES  
     Added Italian translation.
 
-    BUGFIXES
+    BUGFIXES    
     Removed the Large Cold Shield due to it being bugged.
 
 - Version 1.01 (April 10, 2010)
 
-    CHANGES
+    CHANGES  
     Added Spanish translation.
 
-    BUGFIXES
+    BUGFIXES    
     None.
 
 - Version 1.00 (January 7, 2010)
 
-    CHANGES
+    CHANGES  
     Merged the Miriam NPC mod with Dark Ritual.
     Add dialogs between Miriam and the Kali Cultist.
 
-    BUGFIXES
+    BUGFIXES    
     Fixed the Argent Shield for not having a description image.
     Asgrim had a script and death variable that was not his.
     Removed the "temple" portion of Asgrim's store. Its suppose to be a store not a temple.
@@ -151,70 +151,70 @@ FORMER MIRIAM VERSION HISTORY
 
 Version 102 12/03/07
 
-    CHANGES
+    CHANGES  
     None.
-    BUGFIXES
+    BUGFIXES    
     Removed the issue command script in her file since it didn't work properly.
 
 Version 101 11/19/07
 
-    CHANGES
+    CHANGES  
     None.
-    BUGFIXES
+    BUGFIXES    
     Some dialogs errors were fixed. The interjections were not going off like they should.
 
 Version 100 11/16/07
 
-    CHANGES
+    CHANGES  
     First Release
-    BUGFIXES
+    BUGFIXES    
     First Release
 
 FORMER DARK RITUAL VERSION HISTORY
 
 Version 1.03 (January 7, 2009)
 
-    CHANGES
+    CHANGES  
     Fixed some text errors.
     Updated the TP2 file and readme to include up to date links.
-    BUGFIXES
+    BUGFIXES    
     Fixed the Large Cold Shield.
 
 Version 1.02 (December 29, 2007)
 
-    CHANGES
-    Made a few changes to the script files.
+    CHANGES  
+    Made a few CHANGES   to the script files.
     Updated the TP2 file and readme to include up to date links.
-    BUGFIXES
+    BUGFIXES    
     None
 
 Version 1.01
 
-    CHANGES
+    CHANGES  
     N/A
-    BUGFIXES
+    BUGFIXES    
     Fixed the Cult of Kali going hostile on you before they even talk to you.
     Fixed a problem with Ratava dialogue that had the wrong item code for the Blade of Roses.
     Fixed a few spelling errors.
 
 Version 1.00
 
-    CHANGES
+    CHANGES  
     N/A
-    BUGFIXES
+    BUGFIXES    
     N/A
 
 Version .91 ()
 
-    CHANGES
+    CHANGES  
     N/A
-    BUGFIXES
+    BUGFIXES    
     Fixed the corrupted creature file cmgstor1. Caused a hard crash to the game.
 
 Version .90 BETA
 
-    CHANGES
+    CHANGES  
     *BETA only because I have not test it from the very beginning to the very end of the game. I have tested individual things like creature encounters and dialogues with no error. It'll be moved up to 1.00 status if no one encounters a problem or if some are I'll fix them. * 
-    BUGFIXES
+    BUGFIXES    
 
     None Yet
