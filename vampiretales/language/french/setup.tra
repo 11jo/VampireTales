@@ -646,8 +646,8 @@ Comme pour tout les vampires, les griffes de Miriam agissent comme un conduit ve
 @236 = ~Aveuglée par la lumiere du soleil.~
 @237 = ~Vampire Tales (Necessite Throne of Bhaal)~
 @238 = ~Il semble que TOB ne soit pas installe.~
-@239 = ~Culte de l'Oeil Aveugle ameliore.~
-@240 = ~Combat du Menestrel ameliore.~
+@239 = ~NOT RECOMMENDED "Culte de l'Oeil Aveugle ameliore." (WARNING this component overwrite Theshal, a Beholder and some guards)~
+@240 = ~NOT RECOMMENDED "Combat du Menestrel ameliore." (WARNING this component overwrite Bessen, Kail, Nadinal, Iko and Galvarey)~
 @241 = ~Boutique CoM 1~
 
 // WeiDU prompts

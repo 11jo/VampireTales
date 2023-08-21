@@ -496,13 +496,16 @@ UNLESS ~CMGMIRIAM~
 // Improved Cult
 // ////////////////
 
+
 BEGIN @239
 
 COPY	~vampiretales/cult~ ~override~
 
+
 // ///////////////
 // Improved Harper Fight
 // //////////////
+
 
 BEGIN @240
 
@@ -525,6 +528,7 @@ COPY ~vampiretales/harper/items/CMG2AX03.itm~ ~override/CMG2AX03.itm~
   SAY NAME2 @2003
   LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_undesc_to_update = "@2004" END 
   SAY DESC @2005
+
 
 // ///////////////
 // Chosen of Mystra Store Number 1
@@ -568,6 +572,7 @@ COPY	~vampiretales/comstore/cre/gcmdwar1.cre~	~override/gcmdwar1.cre~	SAY NAME1 
 
 
 EXTEND_TOP ~ar0406.bcs~ ~vampiretales/comstore/script/add.baf~
+
 COPY    ~vampiretales/comstore/store/gcmstore.sto~     ~override/gcmstore.sto~
   SAY 0xc @32
 
