@@ -6,6 +6,5 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("CreateCMGMiriam","GLOBAL",1)
-                CreateCreature("CMGMIRI",[1853.2453],6)
-
+		CreateCreature("CMGMIRI",[1853.2453],6)
 END

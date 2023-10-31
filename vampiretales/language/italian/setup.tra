@@ -89,7 +89,7 @@ Danno: 1D8 +3
 +2D4 di Danno da Fuoco
 Tipo di danno: Tagliente
 Peso: 5
-Fattore velocità: 5
+Fattore velocità: 2
 Tipo di competenza: Ascia
 Tipo: ad una mano
 Richiede: 10 alla Forza
@@ -304,10 +304,10 @@ Mago~
 
 STATISTICHE:
 
-THAC0: +2
-Danno: +2
+THAC0: +5
+Danno: +5
 Peso: 2
-Fattore velocità: 4
+Fattore velocità: 2
 Tipo di competenza: Archi
 Tipo: a dua mani
 Non utilizzabile da:
@@ -369,13 +369,15 @@ Personaggi di allineamento Buono e Neutrale
 
 Sulla lama di questo pugnale sono incise le parole "Morte" e "Sangue".
 
+STATISTICHE:
+
 Danno: 1D4 +4
 THACO: +4 di bonus
 Effetto: 20% di possibilità di Risucchio di Livelli
 5% di possibilità di morire. Tu o il tuo nemico?
 Tipo di danno: perforante
 Peso: 1
-Fattore velocità: 0
+Fattore velocità: 1
 Tipo di competenza: Pugnale
 Tipo: ad una mano
 Richiede: 3 alla Forza
@@ -400,8 +402,8 @@ Raggio di Sole
 Nuova Abilità
 L'utilizzatore é immune al Risucchio di Livelli quando brandisce quest'arma.
 
-THACO: +3 di bonus, +4 contro le creature malvagie
-Danno: 1D8 +3, +4 contro le creature malvagie, danno raddoppiato contro I Non morti
+THACO: +3 di bonus, +5 contro le creature malvagie
+Danno: 1D8 +3, +5 contro le creature malvagie, danno raddoppiato contro I Non morti
 Tipo di danno: tagliente
 Peso: 2
 Fattore velocità: 3
@@ -560,8 +562,8 @@ Speciale:
  +1 di bonus alla Classe Armatura
  +50% di Resistenza al Fuoco
 Peso: 4
-Fattore velocità: 5
-Tipo di competenza: Spada Piccola
+Fattore velocità: 2
+Tipo di competenza: Pugnale
 Tipo: ad una mano
 Utilizzabile da:
  Chiunque~
@@ -664,6 +666,6 @@ Come quelli di tutti i vampiri, gli artigli di Miriam sono un condotto del piano
 @236 = ~Accecata dalla luce del sole.~
 @237 = ~Vampire Tales (Richiede Throne of Bhaal)~
 @238 = ~Non sembra esserci TOB installato.~
-@239 = ~NOT RECOMMENDED "Migliorato il Culto dell'Occhio Offuscato" (WARNING this component overwrite Theshal, a Beholder and some guards)~
-@240 = ~NOT RECOMMENDED "Migliorato il Combattimento degli Arpisti" (WARNING this component overwrite Bessen, Kail, Nadinal, Iko and Galvarey)~
+@239 = ~Migliorato il Culto dell'Occhio Offuscato~
+@240 = ~Migliorato il Combattimento degli Arpisti~
 @241 = ~CoM Store 1~

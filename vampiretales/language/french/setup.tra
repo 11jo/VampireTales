@@ -87,7 +87,7 @@ TAC0 : +3
 Dégâts : 1d8 +3, +2d4 points de dégâts de feu
 Type de dégâts : tranchants
 Poids : 5
-Facteur de vitesse : 5
+Facteur de vitesse : 2
 Type de compétence : hache
 Type : arme à 1 main
 Force nécessaire : 10
@@ -298,10 +298,10 @@ Non utilisable par :
 
 PARAMETRES :
 
-TAC0 : +2
-Dégâts : +2
+TAC0 : +5
+Dégâts : +5
 Poids : 2
-Facteur de vitesse : 4
+Facteur de vitesse : 2
 Type de compétence : arc court
 Type : arme à 2 mains
 Non utilisable par :
@@ -366,6 +366,8 @@ Non utilisable par :
 
 Les mots “Sang” et “Mort” son gravés sur le manche de cette dague.
 
+PARAMETRES :
+
 Spécial :
  20 % de chance de drainer un niveau
  5 % de chance de tuer l'ennemi ou le porteur
@@ -374,7 +376,7 @@ TAC0 : +4
 Dégâts : 1d4 +4
 Type de Dégâts : perforants
 Poids : 1
-Facteur de vitesse : 0
+Facteur de vitesse : 1
 Type de compétence : dague
 Type :  arme à 1 main
 Force nécessaire : 3
@@ -397,8 +399,8 @@ Capacités spéciales (une fois par jour) :
 Spécial :
  Protection contre le plan négatif
 
-TAC0 : +3, +4 contre les créatures mauvaises
-Dégâts : 1d8 +3, +4 contre les créatures mauvaises, double les dégâts contre les morts-vivants 
+TAC0 : +3, +5 contre les créatures mauvaises
+Dégâts : 1d8 +3, +5 contre les créatures mauvaises, double les dégâts contre les morts-vivants 
 Type de dégâts : tranchants
 Poids : 2 
 Facteur de vitesse : 3 
@@ -549,8 +551,8 @@ TAC0 : +3
 Dégâts : 1d8 +3
 Type de dégâts : tranchants
 Poids : 4 
-Facteur de vitesse : 5 
-Type de compétence : épée courte 
+Facteur de vitesse : 2 
+Type de compétence : Dague 
 Type : arme à 1 main 
 Utilisable uniquement par : 
  Xan~
@@ -646,8 +648,8 @@ Comme pour tout les vampires, les griffes de Miriam agissent comme un conduit ve
 @236 = ~Aveuglée par la lumiere du soleil.~
 @237 = ~Vampire Tales (Necessite Throne of Bhaal)~
 @238 = ~Il semble que TOB ne soit pas installe.~
-@239 = ~NOT RECOMMENDED "Culte de l'Oeil Aveugle ameliore." (WARNING this component overwrite Theshal, a Beholder and some guards)~
-@240 = ~NOT RECOMMENDED "Combat du Menestrel ameliore." (WARNING this component overwrite Bessen, Kail, Nadinal, Iko and Galvarey)~
+@239 = ~Culte de l'Oeil Aveugle ameliore~
+@240 = ~Combat des Menestrels ameliore~
 @241 = ~Boutique CoM 1~
 
 // WeiDU prompts

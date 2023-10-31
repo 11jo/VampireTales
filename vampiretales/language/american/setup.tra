@@ -89,7 +89,7 @@ Damage: 1D8 +3
 +2D4 Fire Damage
 Damage type: slashing
 Weight: 5
-Speed Factor: 5
+Speed Factor: 2
 Proficiency Type: Axe
 Type: 1-handed
 Requires: 10 Strength
@@ -305,11 +305,11 @@ Mage~
 
 STATISTICS:
 
-THAC0: +2
-Damage: +2
+THAC0: +5
+Damage: +5
 Weight: 2
-Speed Factor: 4
-Proficiency Type: Bow Weapons
+Speed Factor: 2
+Proficiency Type: Short Bow
 Type: 2-handed
 Not Usable By:
  Druid
@@ -370,13 +370,15 @@ Good and neutral alignments
 
 The words "Death" and "Blood" are engraved on the blade.
 
+STATISTICS:
+
 Damage: 1D4 +4
 THACO: +4 bonus
 Effect: 20% Chance of Level Drain
 5% chance of death. You or your enemy?
 Damage type: piercing
 Weight: 1
-Speed Factor: 0
+Speed Factor: 1
 Proficiency Type: Dagger
 Type: 1-handed
 Requires: 3 Strength
@@ -401,8 +403,8 @@ Sunray
 New Ability
 User is immune to level drain when equipped.
 
-THACO: +3 bonus, +4 vs. evil creatures
-Damage: 1D8 +3, +4 vs. evil creatures, does double damage against undead
+THACO: +3 bonus, +5 vs. evil creatures
+Damage: 1D8 +3, +5 vs. evil creatures, does double damage against undead
 Damage type: slashing
 Weight: 2
 Speed Factor: 3
@@ -561,8 +563,8 @@ Special:
  +1 bonus to Armor Class
  +50% Fire Resistance
 Weight: 4
-Speed Factor: 5
-Proficiency Type: Small Sword
+Speed Factor: 2
+Proficiency Type: Dagger
 Type: 1-handed
 Usable By:
  Everyone~
@@ -665,6 +667,6 @@ Like those of all vampires, Miriam's claws are a conduit to the negative materia
 @236 = ~Blinded by sunlight.~
 @237 = ~Vampire Tales (Requires Throne of Bhaal)~
 @238 = ~You do not appear to have TOB installed.~
-@239 = ~NOT RECOMMENDED "Improved Cult of the Unseeing Eye" (WARNING this component overwrite Theshal, a Beholder and some guards)~
-@240 = ~NOT RECOMMENDED "Improved Harper Fight" (WARNING this component overwrite Bessen, Kail, Nadinal, Iko and Galvarey)~
+@239 = ~Improved Cult of the Unseeing Eye~
+@240 = ~Improved Harper Fight~
 @241 = ~CoM Store 1~

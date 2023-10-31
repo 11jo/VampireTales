@@ -1,6 +1,8 @@
 BACKUP ~vampiretales/backup~
 AUTHOR ~"http://www.chosenofmystra.com"~
 
+VERSION ~v105~
+
 README ~vampiretales/README.html~
 
 ALWAYS	
@@ -335,13 +337,15 @@ COPY ~vampiretales/items/CMGDAG02.itm~ ~override/CMGDAG02.itm~
 
 COPY ~vampiretales/items/CMGVAMP.itm~  ~override/CMGVAMP.itm~        
 
-COPY ~vampiretales/items/CMGCLMYS.ITM~ ~override/CMGCLMYS.ITM~       
+COPY ~vampiretales/items/CMGCLMYS.ITM~ ~override/CMGCLMYS.ITM~     // description à revoir
+  SAY NAME2 #10080 
+  SAY DESC #10037           
 
 COPY ~vampiretales/items/CMGWEMYS.ITM~ ~override/CMGWEMYS.ITM~       
   SAY NAME2 @152
    
 
-COPY ~vampiretales/items/CMGRIMYS.ITM~ ~override/CMGRIMYS.ITM~       
+COPY ~vampiretales/items/CMGRIMYS.ITM~ ~override/CMGRIMYS.ITM~           // description à revoir
 
 COPY ~vampiretales/items/CMGFORG2.itm~ ~override/CMGFORG2.itm~       
   SAY NAME2 @153 
@@ -386,9 +390,23 @@ COPY ~vampiretales/items/CMGFORG9.ITM~ ~override/CMGFORG9.ITM~
   SAY NAME2 @172 
   SAY DESC @173
 
-COPY ~vampiretales/items/CMGFOR10.ITM~ ~override/CMGFOR10.ITM~       
+COPY ~vampiretales/items/CMGFOR10.ITM~ ~override/CMGFOR10.ITM~
   SAY NAME2 @174 
   LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@175" END
+
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+
+OUTER_SET COM_XanSword = RESOLVE_STR_REF (#10220)
+OUTER_SET COM_Xan = RESOLVE_STR_REF (#268)
+APPEND ~ITEM_USE.2DA~ ~CMGFOR10   XAN      %COM_XanSword%      2          %COM_Xan%~ UNLESS ~CMGFOR10~
+// APPEND ~ITEM_USE.2DA~ ~ItemName   ActorScriptName      %STRREF  for Flag%      Flag (1, 2 ou 3)          %ActorName%~ UNLESS ~ItemName~
+
+END ELSE ACTION_IF (GAME_IS ~tob bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+
+OUTER_SET COM_XanSword = RESOLVE_STR_REF (#10220)
+APPEND ~ITEM_USE.2DA~ ~CMGFOR10   XAN      -1      2          %COM_XanSword%~ UNLESS ~CMGFOR10~
+	
+END 
 
 // Other
 
@@ -405,10 +423,10 @@ COPY ~vampiretales/other/miriamst.spl~ ~override~
 // *******************stores***
 
 COPY ~vampiretales/store/cmgstr01.sto~     ~override/cmgstr01.sto~
-  SAY 0xc @176
+  SAY STORE_NAME @176
 
 COPY ~vampiretales/store/cmgstr02.sto~     ~override/cmgstr02.sto~
-  SAY 0xc @177
+  SAY STORE_NAME @177
 
 // ******************scripts***
 
@@ -499,7 +517,42 @@ UNLESS ~CMGMIRIAM~
 
 BEGIN @239
 
-COPY	~vampiretales/cult~ ~override~
+COPY_EXISTING ~BHCAPT01.CRE~	~override~ // Capitaine des gardes d'élite
+	WRITE_SHORT 0x14 ~3000~ // XP value (lowered from 4500)
+	WRITE_BYTE 0x52 ~8~  // THACO
+	REPLACE_CRE_ITEM ~PLAT04~ #0 #0 #0 ~unstealable~ ~armor~
+	REPLACE_CRE_ITEM ~SW1H05~ #0 #0 #0 ~unstealable~ ~weapon2~
+	REPLACE_CRE_ITEM ~BOLT04~ #40 #0 #0 ~unstealable~ ~quiver1~
+
+COPY_EXISTING ~BHGUARD.CRE~	~override~ // Garde d'élite
+	WRITE_SHORT 0x14 ~2500~ // XP value (lowered from 3200)
+	WRITE_SHORT 0x1c ~30~ // Gold
+	WRITE_SHORT 0x46 ~3~  // Natural AC
+	WRITE_SHORT 0x48 ~3~  // Effective AC
+	REPLACE_CRE_ITEM ~SW1H02~ #0 #0 #0 ~unstealable~ ~weapon1~
+	REPLACE_CRE_ITEM ~BOLT01~ #20 #0 #0 ~unstealable~ ~quiver2~
+	REPLACE_CRE_ITEM ~XBOW01~ #0 #0 #0 ~unstealable~ ~weapon2~ EQUIP TWOHANDED
+
+COPY_EXISTING ~BHGUARD2.CRE~	~override~ // Garde d'élite
+	WRITE_SHORT 0x14 ~2500~ // XP value (lowered from 3500)
+	WRITE_SHORT 0x46 ~2~  // Natural AC
+	WRITE_SHORT 0x48 ~2~  // Effective AC
+	REPLACE_CRE_ITEM ~SW1H02~ #0 #0 #0 ~unstealable~ ~weapon1~
+	REPLACE_CRE_ITEM ~BOLT01~ #20 #0 #0 ~unstealable~ ~quiver2~
+	REPLACE_CRE_ITEM ~XBOW01~ #0 #0 #0 ~unstealable~ ~weapon2~ EQUIP TWOHANDED
+
+COPY_EXISTING ~CULTBH3.CRE~	~override~ // Tyrannœil
+	WRITE_SHORT 0x14 ~10000~ // XP value (lowered from 12000)
+	WRITE_SHORT 0x24 ~66~ // Current HP
+	WRITE_SHORT 0x26 ~66~ // Maximum HP
+	WRITE_BYTE 0x53 ~2~  // attacks/round 2 (2)
+
+COPY_EXISTING ~THESHAL.CRE~	~override~ // Theshal
+	WRITE_SHORT 0x14 ~2500~ // XP value (lowered from 4050)
+	WRITE_SHORT 0x24 ~58~ // Current HP
+	WRITE_SHORT 0x26 ~58~ // Maximum HP
+	WRITE_BYTE 0x52 ~10~  // THACO
+	WRITE_BYTE 0x53 ~3~  // attacks/round 3 (3)
 
 
 // ///////////////
@@ -509,25 +562,74 @@ COPY	~vampiretales/cult~ ~override~
 
 BEGIN @240
 
-COPY ~vampiretales/harper/jaga1.cre~   ~override/jaga1.cre~
-
-COPY ~vampiretales/harper/jaga2.cre~   ~override/jaga2.cre~
-
-COPY ~vampiretales/harper/jaga3.cre~   ~override/jaga3.cre~
-
-COPY ~vampiretales/harper/jaga4.cre~   ~override/jaga4.cre~
-
-COPY ~vampiretales/harper/jagalvar.cre~   ~override/jagalvar.cre~
-
 COPY ~vampiretales/harper/items/CMGRIN02.itm~ ~override/CMGRIN02.itm~       
-  SAY NAME2 @2000 
-  SAY DESC @2001 
+	SAY NAME2 @2000 
+	SAY DESC @2001 
 
 COPY ~vampiretales/harper/items/CMG2AX03.itm~ ~override/CMG2AX03.itm~       
-  SAY NAME1 @2002 
-  SAY NAME2 @2003
-  LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_undesc_to_update = "@2004" END 
-  SAY DESC @2005
+	SAY NAME1 @2002 
+	SAY NAME2 @2003
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_undesc_to_update = "@2004" END 
+	SAY DESC @2005
+
+COPY_EXISTING ~jaga1.CRE~	~override~ // Bessen
+	WRITE_SHORT 0x14 ~3000~ // XP value (lowered from 4500)
+	WRITE_SHORT 0x24 ~48~ // Current HP
+	WRITE_SHORT 0x26 ~48~ // Maximum HP
+	WRITE_BYTE 0x52 ~14~  // THACO
+	WRITE_ASCII 0x260 ~USEITEM~ (8)  // script General  
+	WRITE_BYTE 0x27b ~50~  // Alignement (CHAOTIC_NEUTRAL - 50)
+	ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~Wizard~ ( 2 ) // memorized
+	ADD_MEMORIZED_SPELL ~SPWI508~ #4 ~Wizard~ ( 1 ) // memorized
+	ADD_MEMORIZED_SPELL ~SPWI522~ #4 ~Wizard~ ( 1 ) // memorized
+	ADD_CRE_ITEM ~CLCK14~ #0 #0 #0 ~unstealable~ ~armor~
+	REPLACE_CRE_ITEM ~DART03~ #20 #0 #0 ~unstealable~ ~weapon1~ EQUIP
+	REPLACE_CRE_ITEM ~DART04~ #40 #0 #0 ~unstealable~ ~weapon2~
+	ADD_CRE_ITEM ~POTN52~ #5 #0 #0 ~unstealable~ ~qitem3~
+
+COPY_EXISTING ~jaga2.CRE~	~override~ // Kail
+	//WRITE_SHORT 0x14 ~3000~ // XP value (lowered from 4000)
+	WRITE_BYTE 0x27b ~18~  // Alignement (LAWFUL_NEUTRAL - 18)
+	ADD_CRE_ITEM ~SW1H49~ #0 #0 #0 ~unstealable~ ~shield~
+	REPLACE_CRE_ITEM ~SW1H55~ #20 #0 #0 ~unstealable~ ~weapon1~ EQUIP
+	ADD_CRE_ITEM ~POTN14~ #5 #0 #0 ~unstealable~ ~qitem1~
+
+COPY_EXISTING ~jaga3.CRE~	~override~ // Nadinal
+	WRITE_SHORT 0x14 ~2000~ // XP value
+	WRITE_SHORT 0x24 ~43~ // Current HP
+	WRITE_SHORT 0x26 ~43~ // Maximum HP
+	WRITE_BYTE 0x52 ~12~  // THACO
+	WRITE_ASCII 0x260 ~USEITEM~ (8)  // script General  
+	WRITE_BYTE 0x27b ~34~  // Alignement (NEUTRAL - 34)
+	ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~Wizard~ ( 2 ) // memorized
+	ADD_MEMORIZED_SPELL ~SPWI212~ #1 ~Wizard~ ( 1 ) // memorized
+	ADD_MEMORIZED_SPELL ~SPWI407~ #3 ~Wizard~ ( 1 ) // memorized
+	ADD_MEMORIZED_SPELL ~SPWI501~ #4 ~Wizard~ ( 1 ) // memorized
+	ADD_MEMORIZED_SPELL ~SPWI521~ #4 ~Wizard~ ( 1 ) // memorized
+	ADD_CRE_ITEM ~CLCK10~ #0 #0 #0 ~unstealable~ ~armor~
+	REPLACE_CRE_ITEM ~STAF24~ #0 #0 #0 ~unstealable~ ~weapon1~ EQUIP
+
+COPY_EXISTING ~jaga4.CRE~	~override~ // Iko
+	WRITE_SHORT 0x14 ~3500~ // XP value (lowered from 4500)
+	WRITE_BYTE 0x52 ~12~  // THACO
+	WRITE_BYTE 0x53 ~2~  // attacks/round 2 (2)
+	WRITE_BYTE 0x27b ~35~  // Alignement (NEUTRAL_EVIL - 35)
+	REPLACE_CRE_ITEM ~LEAT05~ #0 #0 #0 ~unstealable~ ~armor~
+	REPLACE_CRE_ITEM ~XBOW05~ #0 #0 #0 ~unstealable~ ~weapon2~ EQUIP
+	REPLACE_CRE_ITEM ~SW1H09~ #0 #0 #0 ~unstealable~ ~weapon1~
+	REPLACE_CRE_ITEM ~BOLT02~ #40 #0 #0 ~unstealable~ ~quiver2~
+	REPLACE_CRE_ITEM ~BOLT03~ #40 #0 #0 ~unstealable~ ~quiver1~
+	REPLACE_CRE_ITEM ~POTN52~ #5 #0 #0 ~unstealable~ ~qitem2~
+
+COPY_EXISTING ~jagalvar.CRE~	~override~ // Galvarey
+	WRITE_SHORT 0x14 ~5000~ // XP value (lowered from 6000)
+	WRITE_SHORT 0x1c ~670~ // Gold
+	WRITE_BYTE 0x53 ~9~  // attacks/round 7/2 (9)
+	REPLACE_CRE_ITEM ~PLAT02~ #0 #0 #0 ~unstealable~ ~armor~
+	ADD_CRE_ITEM ~CMGRIN02~ #0 #0 #0 ~unstealable~ ~lring~
+	REPLACE_CRE_ITEM ~BOW02~ #0 #0 #0 ~unstealable~ ~weapon1~
+	REPLACE_CRE_ITEM ~CMG2AX03~ #0 #0 #0 ~unstealable~ ~weapon2~ EQUIP TWOHANDED
+	REPLACE_CRE_ITEM ~POTN14~ #2 #0 #0 ~unstealable~ ~qitem3~
 
 
 // ///////////////
@@ -538,43 +640,73 @@ BEGIN @241
 
 COPY	~vampiretales/comstore/bams~ ~override~
 
-COPY    ~vampiretales/comstore/items/gcma01.itm~   ~override/gcma01.itm~ SAY NAME2 @1 SAY DESC @2
+COPY    ~vampiretales/comstore/items/gcma01.itm~   ~override/gcma01.itm~ 
+	SAY NAME2 @1 
+	SAY DESC @2
 
-COPY    ~vampiretales/comstore/items/gcma02.itm~   ~override/gcma02.itm~ SAY NAME2 @3 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
+COPY    ~vampiretales/comstore/items/gcma02.itm~   ~override/gcma02.itm~ 
+	SAY NAME2 @3 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
 
-COPY    ~vampiretales/comstore/items/gcmar01.itm~   ~override/gcmar01.itm~ SAY NAME2 @5 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@6" END
+COPY    ~vampiretales/comstore/items/gcmar01.itm~   ~override/gcmar01.itm~ 
+	SAY NAME2 @5 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@6" END
 
-COPY    ~vampiretales/comstore/items/gcmar02.itm~   ~override/gcmar02.itm~ SAY NAME2 @7 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@8" END
+COPY    ~vampiretales/comstore/items/gcmar02.itm~   ~override/gcmar02.itm~ 
+	SAY NAME2 @7 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@8" END
 
-COPY    ~vampiretales/comstore/items/gcmax01.itm~   ~override/gcmax01.itm~ SAY NAME2 @9 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@10" END
+COPY    ~vampiretales/comstore/items/gcmax01.itm~   ~override/gcmax01.itm~ 
+	SAY NAME2 @9 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@10" END
 
-COPY    ~vampiretales/comstore/items/gcmax02.itm~   ~override/gcmax02.itm~ SAY NAME2 @11 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@12" END
+COPY    ~vampiretales/comstore/items/gcmax02.itm~   ~override/gcmax02.itm~ 
+	SAY NAME2 @11 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@12" END
 
-COPY    ~vampiretales/comstore/items/gcmax03.itm~   ~override/gcmax03.itm~ SAY NAME2 @13 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@14" END
+COPY    ~vampiretales/comstore/items/gcmax03.itm~   ~override/gcmax03.itm~ 
+	SAY NAME2 @13 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@14" END
 
-COPY    ~vampiretales/comstore/items/gcmch01.itm~   ~override/gcmch01.itm~ SAY NAME2 @15 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@16" END
+COPY    ~vampiretales/comstore/items/gcmch01.itm~   ~override/gcmch01.itm~ 
+	SAY NAME2 @15 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@16" END
 
-COPY    ~vampiretales/comstore/items/gcmha01.itm~   ~override/gcmha01.itm~ SAY NAME2 @17 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@18" END
+COPY    ~vampiretales/comstore/items/gcmha01.itm~   ~override/gcmha01.itm~ 
+	SAY NAME2 @17 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@18" END
 
-COPY    ~vampiretales/comstore/items/gcmham01.itm~   ~override/gcmham01.itm~ SAY NAME2 @19 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@20" END
+COPY    ~vampiretales/comstore/items/gcmham01.itm~   ~override/gcmham01.itm~ 
+	SAY NAME2 @19 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@20" END
 
-COPY    ~vampiretales/comstore/items/gcmpl01.itm~   ~override/gcmpl01.itm~ SAY NAME2 @21 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@22" END
+COPY    ~vampiretales/comstore/items/gcmpl01.itm~   ~override/gcmpl01.itm~ 
+	SAY NAME2 @21 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@22" END
 
-COPY    ~vampiretales/comstore/items/gcmri01.itm~   ~override/gcmri01.itm~ SAY NAME2 @23 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@24" END
+COPY    ~vampiretales/comstore/items/gcmri01.itm~   ~override/gcmri01.itm~ 
+	SAY NAME2 @23 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@24" END
 
-COPY    ~vampiretales/comstore/items/gcms1h01.itm~   ~override/gcms1h01.itm~ SAY NAME2 @25 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@26" END
+COPY    ~vampiretales/comstore/items/gcms1h01.itm~   ~override/gcms1h01.itm~ 
+	SAY NAME2 @25 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@26" END
 
-COPY    ~vampiretales/comstore/items/gcmsh01.itm~   ~override/gcmsh01.itm~ SAY NAME2 @27 LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@28" END
+COPY    ~vampiretales/comstore/items/gcmsh01.itm~   ~override/gcmsh01.itm~ 
+	SAY NAME2 @27 
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@28" END
 
 // COPY    ~vampiretales/comstore/items/gcmsh02.itm~   ~override/gcmsh02.itm~ SAY NAME2 @29 SAY DESC @30
 
-COPY	~vampiretales/comstore/cre/gcmdwar1.cre~	~override/gcmdwar1.cre~	SAY NAME1 @31 SAY NAME2 @31 
+COPY	~vampiretales/comstore/cre/gcmdwar1.cre~	~override/gcmdwar1.cre~	
+	SAY NAME1 @31 
+	SAY NAME2 @31 
 
 
 EXTEND_TOP ~ar0406.bcs~ ~vampiretales/comstore/script/add.baf~
 
 COPY    ~vampiretales/comstore/store/gcmstore.sto~     ~override/gcmstore.sto~
-  SAY 0xc @32
+	SAY STORE_NAME @32
 
 
 

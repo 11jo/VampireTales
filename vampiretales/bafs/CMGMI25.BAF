@@ -112,7 +112,7 @@ IF
 	Global("CMgEnteredAR5004","GLOBAL",0)
 THEN
 	RESPONSE #100
-                Wait(2)
+		Wait(2)
 		StartDialogueNoSet(Player1)
 END
 
@@ -124,7 +124,7 @@ IF
 	Global("MiriamYanCBinDies","GLOBAL",0)
 THEN
 	RESPONSE #100
-                Wait(2)
+		Wait(2)
 		StartDialogueNoSet(Player1)
 END
 

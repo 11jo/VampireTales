@@ -85,7 +85,7 @@ GAC0: +3
 Daño: 1D8 +3 +2D4 puntos de daño por fuego
 Tipo de daño: Cortante
 Peso: 5
-Factor de velocidad: 5
+Factor de velocidad: 2
 Talento marcial: Hacha
 Tipo: una mano
 Requiere 10 de Fuerza
@@ -292,10 +292,10 @@ No lo puede usar:
 
 CARACTERÍSTICAS:
 
-GAC0: +2
-Daño: +2
+GAC0: +5
+Daño: +5
 Peso: 2
-Factor de velocidad: 4
+Factor de velocidad: 2
 Talento marcial: Arcos
 
 No lo puede usar:
@@ -357,13 +357,15 @@ Los alineamientos buenos y neutrales.
 
 Las palabras "muerte" y "Sangre" están grabadas en la hoja.
 
+CARACTERÍSTICAS:
+
 Daño: 1D4 +4
 GAC0: bonificador +4
 Efecto: 20% Probabilidad de drenar un nivel
 5% de probabilidad de muerte. ¿Tuya o de tu enemigo?
 Tipo de daño: Perforante
 Peso: 1
-Factor de velocidad: 0
+Factor de velocidad: 1
 Talento marcial: Daga
 Tipo: una mano
 
@@ -386,8 +388,8 @@ Rayo solar
 Nueva Habilidad
 El usuario es inmune a ser drenado de nivel cuando la lleva.
 
-GAC0: +3 de bonificación, +4 contra criaturas malvadas
-Daño: 1D8 +3, +4 contra criaturas malvadas, es el doble de daño contra muertos vivientes
+GAC0: +3 de bonificación, +5 contra criaturas malvadas
+Daño: 1D8 +3, +5 contra criaturas malvadas, es el doble de daño contra muertos vivientes
 Tipo de daño: cuchillada
 Peso: 2
 Factor de Velocidad: 3
@@ -539,8 +541,8 @@ Especial:
 +1 a la Clase de Armadura
 +50% de resistencia al fuego
 Peso: 4 
-Factor de velocidad: 5
-Talento marcial: Espada pequeña
+Factor de velocidad: 2
+Talento marcial: Daga
 Tipo: a 1 mano
 ~
 @176 = ~Artículos mágicamente mejorados~
@@ -645,6 +647,6 @@ Como las de todos los vampiros, las garras de Miriam son un conducto hacia el pl
 @236 = ~Cegada por la luz solar~
 @237 = ~Vampire Tales (Requiere Throne of Bhaal)~
 @238 = ~Parece ser que no tiene TOB instalado~
-@239 = ~NOT RECOMMENDED "Culto del Ojo Ciego mejorado" (WARNING this component overwrite Theshal, a Beholder and some guards)~
-@240 = ~NOT RECOMMENDED "Pelea Arpista mejorada" (WARNING this component overwrite Bessen, Kail, Nadinal, Iko and Galvarey)~
+@239 = ~Culto del Ojo Ciego mejorado~
+@240 = ~Pelea Arpista mejorada~
 @241 = ~CoM Store 1~
