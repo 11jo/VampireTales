@@ -4,7 +4,7 @@
 
 **Autor** : **Dark Raven**
 
-[Link to Mod Forum]()
+[Link to full readme](https://htmlpreview.github.io/?https://github.com/The-Gate-Project/VampireTales/blob/main/vampiretales/README.Github.html)
 
 [Link to Mod Forum]()
 
@@ -85,9 +85,14 @@ A: Originally this mod was Dark Ritual and Miriam as seperate mods. I combined t
 ## VERSION HISTORY
 ------------------
 
-- Version 2.00 (February, 2023)
+- Version 1.06 (October, 2023)
 
-    CHANGES      
+    CHANGES       
+	
+	- InfinityAutoPackager   
+	- Metadata and Labels    
+	- Improved Cult of the Unseeing Eye and Improved Harper Fight don't overwrite files anymore   
+	- Corrections for items  
 	- BG2EE / EET compatibility  
 	- Use some files of BG2EE version by Com_Solaufein (GCMDWAR1.cre, CGAVATAR.baf, CMGMIRI.baf, MIRIAMH 1 à 6 .itm)  
 	- Handle Charset and iconV for keep oBG2 compatibility  
