@@ -521,17 +521,21 @@ LABEL ~Dark_Raven-Improved_Cult~
 
 COPY_EXISTING ~BHCAPT01.CRE~	~override~ // Capitaine des gardes d'élite
 	WRITE_SHORT 0x14 ~3000~ // XP value (lowered from 4500)
-	WRITE_BYTE 0x52 ~8~  // THACO
+	WRITE_BYTE 0x52 ~11~  // THACO
+	WRITE_BYTE 0x53 ~8~  // attacks/round 5/2 (8)
 	REPLACE_CRE_ITEM ~PLAT04~ #0 #0 #0 ~unstealable~ ~armor~
 	REPLACE_CRE_ITEM ~SW1H05~ #0 #0 #0 ~unstealable~ ~weapon2~
 	REPLACE_CRE_ITEM ~BOLT04~ #40 #0 #0 ~unstealable~ ~quiver1~
+	ADD_CRE_ITEM ~BOLT01~ #20 #0 #0 ~unstealable~ ~quiver2~
 
 COPY_EXISTING ~BHGUARD.CRE~	~override~ // Garde d'élite
 	WRITE_SHORT 0x14 ~2500~ // XP value (lowered from 3200)
 	WRITE_SHORT 0x1c ~30~ // Gold
 	WRITE_SHORT 0x46 ~3~  // Natural AC
 	WRITE_SHORT 0x48 ~3~  // Effective AC
+	WRITE_BYTE 0x52 ~8~  // THACO
 	REPLACE_CRE_ITEM ~SW1H02~ #0 #0 #0 ~unstealable~ ~weapon1~
+	REPLACE_CRE_ITEM ~BOLT01~ #20 #0 #0 ~unstealable~ ~quiver1~
 	REPLACE_CRE_ITEM ~BOLT01~ #20 #0 #0 ~unstealable~ ~quiver2~
 	REPLACE_CRE_ITEM ~XBOW01~ #0 #0 #0 ~unstealable~ ~weapon2~ EQUIP TWOHANDED
 
@@ -539,7 +543,9 @@ COPY_EXISTING ~BHGUARD2.CRE~	~override~ // Garde d'élite
 	WRITE_SHORT 0x14 ~2500~ // XP value (lowered from 3500)
 	WRITE_SHORT 0x46 ~2~  // Natural AC
 	WRITE_SHORT 0x48 ~2~  // Effective AC
+	WRITE_BYTE 0x52 ~6~  // THACO
 	REPLACE_CRE_ITEM ~SW1H02~ #0 #0 #0 ~unstealable~ ~weapon1~
+	REPLACE_CRE_ITEM ~BOLT01~ #20 #0 #0 ~unstealable~ ~quiver1~
 	REPLACE_CRE_ITEM ~BOLT01~ #20 #0 #0 ~unstealable~ ~quiver2~
 	REPLACE_CRE_ITEM ~XBOW01~ #0 #0 #0 ~unstealable~ ~weapon2~ EQUIP TWOHANDED
 
@@ -599,6 +605,7 @@ COPY_EXISTING ~jaga2.CRE~	~override~ // Kail
 
 COPY_EXISTING ~jaga3.CRE~	~override~ // Nadinal
 	WRITE_SHORT 0x14 ~2000~ // XP value
+	WRITE_SHORT 0x1c ~10~ // Gold
 	WRITE_SHORT 0x24 ~43~ // Current HP
 	WRITE_SHORT 0x26 ~43~ // Maximum HP
 	WRITE_BYTE 0x52 ~12~  // THACO
