@@ -1,6 +1,6 @@
 @0    = ~D'où venez-vous <CHARNAME> ?~
-@1    = ~Je suis de Châteausuif. J'ai été élevé là-bas par mon père adoptif Gorion.~ ~Je suis de Châteausuif. J'ai été élevée là-bas par mon père adoptif Gorion.~
-@2    = ~J'ai été élevé sur la Côte des Épées, dans une bibliothèque fortifiée appelée Châteausuif.~ ~J'ai été élevée sur la Côte des Épées, dans une bibliothèque fortifiée appelée Châteausuif.~
+@1    = ~Je suis de Château-Suif. J'ai été élevé là-bas par mon père adoptif Gorion.~ ~Je suis de Château-Suif. J'ai été élevée là-bas par mon père adoptif Gorion.~
+@2    = ~J'ai été élevé sur la Côte des Épées, dans une bibliothèque fortifiée appelée Château-Suif.~ ~J'ai été élevée sur la Côte des Épées, dans une bibliothèque fortifiée appelée Château-Suif.~
 @3    = ~Ce ne sont pas vos affaires, Miriam.~
 @4    = ~Votre père adoptif ? Avez-vous des parents encore en vie ?~
 @5    = ~J'ai une demi-sœur appelée Imoen, c'est elle que nous allons tirer des griffes d'Irenicus.~
@@ -20,12 +20,12 @@
 @19   = ~Ceci ne vous concerne en aucun cas, Miriam.~
 @20   = ~Oui, c'est ainsi que nous sommes. Les bavardages inutiles sont hors de propos. Revenons-en à la question s'il vous plaît.~
 @21   = ~Tout à fait, je suis la progéniture de Bhaal, le dieu du meurtre.~
-@22   = ~Ca va Miriam, j'aime les gens directs. Pour répondre à votre question, oui mon père était Bhaal, le dieu du meurtre.~
+@22   = ~Ça va Miriam, j'aime les gens directs. Pour répondre à votre question, oui mon père était Bhaal, le dieu du meurtre.~
 @23   = ~Oui je suis l'enfant du dieu du meurtre, Bhaal. Mais ceci ne vous concerne vraiment pas Miriam.~
 @24   = ~Ertruem, meurtre, meurtre, le dieu Bhaal. Déchu, la mort ultime pour Lui-même. Cyric l'usurpateur. Cela vous plaît-il d'être sa progéniture ?~
 @25   = ~Non cela ne me plaît pas. L'idée même que mon père se délectait de la mort, la destruction et le meurtre d'innocents me répugne !~
 @26   = ~Je ne sais pas trop quoi en penser. Le sang d'un dieu coule dans mes veines, mais c'est le sang d'un meurtrier.~
-@27   = ~Ca me plaît assez d'être son enfant. J'espère juste faire honneur à sa réputation.~
+@27   = ~Ça me plaît assez d'être son enfant. J'espère juste faire honneur à sa réputation.~
 @28   = ~Vous êtes ce que vous êtes <CHARNAME>, et on ne peut rien y changer.~
 @29   = ~C'est *vous* qui écrivez votre propre destin. Souvenez-vous en.~
 @30   = ~Ne restez pas indécis trop longtemps <CHARNAME>. Le moment viendra où un choix devra être fait. Vous devrez faire preuve de sagesse, pour votre destin et celui des autres...~ ~Ne restez pas indécise trop longtemps <CHARNAME>. Le moment viendra où un choix devra être fait. Vous devrez faire preuve de sagesse, pour votre destin et celui des autres...~
@@ -75,7 +75,7 @@
 @74   = ~(Miriam n'a pas été elle-même dernièrement, se montrant étrangement taciturne. Il semblerait que quelque chose la préoccupe.)~
 @75   = ~Quelque chose vous tracasse Miriam ? Vous n'êtes pas très bavarde ces derniers temps.~
 @76   = ~(Vous ne dites rien.)~
-@77   = ~Ni délires ni divagations Miriam ? Ca ne vous ressemble pas. Quelque chose ne va pas ?~
+@77   = ~Ni délires ni divagations Miriam ? Ça ne vous ressemble pas. Quelque chose ne va pas ?~
 @78   = ~Vos voix ne se sont pas manifestées aujourd'hui Miriam ?~
 @79   = ~Hmmm ? Oui nous avons été silencieuse, n'est-ce pas ? Suite à notre conversation sur la famille, nous nous sommes mise à méditer sur notre passé.~
 @80   = ~Qu'en est-il de votre passé ? Ceci aurait-il un rapport avec votre famille ?~

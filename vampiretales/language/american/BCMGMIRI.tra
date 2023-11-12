@@ -1,5 +1,5 @@
 @0    = ~Where are you from, <CHARNAME>?~
-@1    = ~I'm from Candlekeep. I was raised there as a child by my foster father Gorian.~
+@1    = ~I'm from Candlekeep. I was raised there as a child by my foster father Gorion.~
 @2    = ~I was raised along the Sword Coast in a fortress library called Candlekeep.~
 @3    = ~It's none of your business, Miriam.~
 @4    = ~Foster father? Any living relatives?~
@@ -128,7 +128,7 @@
 @127  = ~Miriam, have I told you the tale about my Aunt Bixxy and how she won the annual baking contest in Amn?~
 @128  = ~No Long Winded One you have not.~
 @129  = ~Well it goes... ~
-@130  = ~She cheated her way to the championship by putting foul tasting herbs into the competition’s cakes while they were not looking.~
+@130  = ~She cheated her way to the championship by putting foul tasting herbs into the competition's cakes while they were not looking.~
 @131  = ~She also knew her cake was not that great so she promised some of the judges sexual favors if they voted for her. Does this some it up?~
 @132  = ~(For once Jan is speechless, his mouth wide open as he stands there dumbfounded.)~
 @133  = ~We have a unique insight as you can see or are you perplexed that we would speak the truth about your lovable aunt?~

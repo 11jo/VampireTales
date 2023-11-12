@@ -15,7 +15,7 @@
 @14   = ~Lisez-le Edwina, lisez ! Nous comprenons à présent, vous allez être sous le choc, les autres aussi d'ailleurs !~
 @15   = ~Edwina ? Silence pauvre folle décérébrée ! Je vais lire ceci car ma grandeur est à portée de main. (Pourquoi dois-je supporter la présence de tels imbéciles ?)~
 @16   = ~Toutes ces discussions à propos de sang nous excitent !~
-@17   = ~Ah-ha ! Du sang de vampire ! Ca fait longtemps que je n'en ai pas bu.~
+@17   = ~Ah-ha ! Du sang de vampire ! Ça fait longtemps que je n'en ai pas bu.~
 @18   = ~La mort ultime vous attend, c'est certain. Ha ha ha !~
 @19   = ~Vous savez il fait plutôt chaud par ici. Nous ne supportons vraiment pas la chaleur <CHARNAME>, tuons cette imbécile et partons d'ici !~
 @20   = ~Vengeance, nous aimons la vengeance et sa douce amertume.~
@@ -29,10 +29,10 @@
 @28   = ~Tuez-les si ça vous chante, peu nous importe. Ils ne sont pas de notre famille, nous sommes notre propre famille, nous et moi. Nous avons défait celui qui nous avait défait. Mort ultime.~
 @29   = ~Euh si vous le dites. Remettons-nous en route.~
 @30   = ~Tout le plaisir sera pour nous. Notre soif sera étanchée.~
-@31   = ~Ce type est étrange. Oui étrange. Ca nous fait frissonner de l'intérieur.~
+@31   = ~Ce type est étrange. Oui étrange. Ça nous fait frissonner de l'intérieur.~
 @32   = ~Hum, de quoi parlions-nous ?~
 @33   = ~C'est bien <CHARNAME>, nous aimons exercer notre métier, tout particulièrement sur les prêtres.~
-@34   = ~Ca nous plaît de voler dans les temples, nous n'aimons pas ces dévots de prêtres.~
+@34   = ~Ça nous plaît de voler dans les temples, nous n'aimons pas ces dévots de prêtres.~
 @35   = ~Quand on fait partie des Voleurs de l'Ombre, il faut être prêt à poignarder dans le dos quiconque se met en travers de son chemin.~
 @36   = ~La Mort Ultime est proche, nous le sentons mais ne soyez pas effrayés. Nous trouverons un remède, et la petite pourra reprendre ses vaines occupations !~
 @37   = ~Stupide queutard. Tu ne tiendrais pas longtemps avec nous.~
@@ -86,9 +86,9 @@
 @85   = ~Une elfe noir qui a le cœur aussi sombre que le nôtre.~
 @86   = ~Nous l'accueillerions à bras ouverts.~
 @87   = ~Peu importe les circonstances ! Si vous n'êtes pas avec nous, vous êtes contre nous. Vous avez clairement cherché à nous nuire en aidant notre ennemi. Pour ceci vous devez mourir.~
-@88   = ~Oh Anomen ! Nous ne pensions pas que vous étiez capable de cela. Ca fait plaisir à voir !~
+@88   = ~Oh Anomen ! Nous ne pensions pas que vous étiez capable de cela. Ça fait plaisir à voir !~
 @89   = ~Miriam, l'étrange aventurière se tient à vos côtés. Acceptera-t-elle de se lancer dans une nouvelle aventure avec vous ?~
-@90   = ~Ca passe ou ça casse, Miriam. J'ai besoin que vous donniez le meilleur de vous-même.~
+@90   = ~Ça passe ou ça casse, Miriam. J'ai besoin que vous donniez le meilleur de vous-même.~
 @91   = ~Miriam, Irenicus n'en a pas après vous, c'est à moi qu'il en veut. Je comprendrai si vous décidez de tirer votre révérence pour suivre votre propre voie.~
 @92   = ~Avant toute chose, laissez-moi vous remercier pour toute l'aide que vous avez apportée. Ce fut une sacrée aventure.~
 @93   = ~Ils le seront, faites-moi confiance. (Son sourire vous met mal à l'aise.)~
@@ -109,7 +109,7 @@
 @108  = ~Vous êtes sacrément pâle m'dame. Vous êtes morte ?~
 @109  = ~Nous nous demandons si les petits enfants ont un goût sucré.~
 @110  = ~Eekkkk !~
-@111  = ~Etes-vous un vampire, m'dame ? Vous en avez l'air.~
+@111  = ~Êtes-vous un vampire, m'dame ? Vous en avez l'air.~
 @112  = ~(Miriam sourit à l'enfant en découvrant ses canines.)~
 @113  = ~Vous êtes jolie comme ces dames de la Couronne de Cuivre. Vous en faites partie ?~
 @114  = ~Nous ne faisons partie de rien, nous sommes nous.~

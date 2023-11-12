@@ -96,8 +96,8 @@ Non utilisable par :
  Clerc
  Mage 
  Voleur~
-@110 = ~Epée courte~
-@111 = ~Epée courte +4 : "Enfer"~
+@110 = ~Épée courte~
+@111 = ~Épée courte +4 : "Enfer"~
 @112 = ~L'épée courte est le premier type d'épée à être apparu. Grossièrement, on peut comparer une épée courte à une dague dont la lame serait si longue qu'on ne pourrait plus l'appeler dague. Le terme épée courte n'entre pas dans les catégories d'épées. Pourtant, il est utilisé pour décrire une lame à double tranchant longue d'environ 60 cm. L'estoc de l'épée est généralement pointu et on la range donc parmi les armes perforantes.
 
 PARAMETRES :
@@ -128,8 +128,8 @@ Non utilisable par :
  Druide
  Clerc 
  Mage~
-@114 = ~Etrange armure~
-@115 = ~Ecailles de dragon noir~
+@114 = ~Étrange armure~
+@115 = ~Écailles de dragon noir~
 @116 = ~Cette armure a une apparence et une texture singulières. A première vue, elle semble être une armure de cuir courante, mais après une inspection poussée elle s'avère être fabriquée à partir de fines écailles noires très élastiques.~
 @117 = ~Cette armure a été créée par les forgerons et les prêtres nains du clan Marteaudeguerre quand l'un d'eux, Bruenal, mena une bande de champions vaincre un Dragon noir loin dans le sud. Certains nains préférèrent ne pas porter d'armure confectionnée à partir des restes du dragon, mais Bruenal porta fièrement l'armure jusqu'à la fin de ses jours.
 
@@ -383,7 +383,7 @@ Force nécessaire : 3
 Non utilisable par :
  Clerc~
 @152 = ~Toucher mortel~
-@153 = ~Etoile du jour~
+@153 = ~Étoile du jour~
 @154 = ~Lame-soleil : Étoile du jour
 Qu'elle ait été créée spécialement pour servir Torm ou qu'elle ait été acquise au cours de la longue histoire de l'église, l'Etoile du jour a longtemps été utilisée par les paladins dans leur lutte contre les morts-vivants. Elle a reçu, par la magie ou la bénédiction, le pouvoir du rayon solaire, une force d'énergie vitale si puissante qu'elle détruit les vivants et les non-vivants.
 
@@ -427,7 +427,7 @@ Utilisable par :
  Mage d'alignement bon~
 @160 = ~Amulette d'influence sur les méta-sorts~
 @161 = ~Amulette d'influence sur les méta-sorts : "l'Amplificateur"
-Célèbre pour son pouvoir d'amélioration des sorts, l'amulette d'influence sur les méta-sorts est très recherchée par ceux qui pratiquent la magie. Elle a été créée par Elairdrin Mellwith, qui résidait dans les Montagnes des Etoiles. Il eut l'idée de fabriquer un tel objet parce qu'il était coureur de jupons. En ce sens l'Amplificateur lui fut d'une grande utilité. L'amulette lui fut ensuite ravie par un mage animé de plus mauvaises intentions, mais cette histoire est sujette à une grande variété d'interprétations.
+Célèbre pour son pouvoir d'amélioration des sorts, l'amulette d'influence sur les méta-sorts est très recherchée par ceux qui pratiquent la magie. Elle a été créée par Elairdrin Mellwith, qui résidait dans les Montagnes des Étoiles. Il eut l'idée de fabriquer un tel objet parce qu'il était coureur de jupons. En ce sens l'Amplificateur lui fut d'une grande utilité. L'amulette lui fut ensuite ravie par un mage animé de plus mauvaises intentions, mais cette histoire est sujette à une grande variété d'interprétations.
 
 PARAMETRES :
 
@@ -450,7 +450,7 @@ Non utilisable par :
  Clerc
  Mage
  Voleur~
-@164 = ~Epée améliorée de Baldurien~
+@164 = ~Épée améliorée de Baldurien~
 @165 = ~Epée de Baldurien
 Cette épée était l'arme de prédilection du héros fondateur de la Porte de Baldur. Elle fait partie des objets dérobés au musée de la ville.
 
@@ -571,7 +571,7 @@ Utilisable uniquement par :
 @188 = ~La loyauté envers son seigneur.~ [MIRI03]
 @189 = ~ Un destin funeste vous attend !~ [MELISS02]
 @190 = ~ Tu vas souffrir !~ [MELISS03]
-@191 = ~ Ca ne devrait pas prendre longtemps.~ [BODHIX04]
+@191 = ~ Ça ne devrait pas prendre longtemps.~ [BODHIX04]
 @192 = ~ C'est un honneur pour vous de me servir de nourriture !~ [VAMPFX06]
 @193 = ~ Je vais me délecter de votre cœur !~ [VAMPFX05]
 @194 = ~De nos jours, seuls les forts survivent.~ [MIRI04]
@@ -645,7 +645,7 @@ Comme pour tout les vampires, les griffes de Miriam agissent comme un conduit ve
 @234 = ~Griffes de Miriam
 Comme pour tout les vampires, les griffes de Miriam agissent comme un conduit vers le plan matériel négatif. Son toucher glacial est considéré comme une arme +5, inflige 1d6+5 dégâts et draine 5 niveaux à sa cible.~
 @235 = ~Les super griffes de la mort de Miriam.~
-@236 = ~Aveuglée par la lumiere du soleil.~
+@236 = ~Aveuglée par la lumière du soleil.~
 @237 = ~Vampire Tales (Necessite Throne of Bhaal)~
 @238 = ~Il semble que TOB ne soit pas installe.~
 @239 = ~Culte de l'Oeil Aveugle ameliore~

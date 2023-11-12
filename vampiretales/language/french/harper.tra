@@ -26,7 +26,7 @@ Non utilisable par :
  Mage 
  Voleur~
  
-@2005 = ~Les haches de frappe adente sont très peu courantes, car très peu d'exemplaires ont été forgés. Les rumeurs avancent que leur créateur était un survivant de la ville perdue de Néthéril.
+@2005 = ~Les haches de frappe ardente sont très peu courantes, car très peu d'exemplaires ont été forgés. Les rumeurs avancent que leur créateur était un survivant de la ville perdue de Néthéril.
 
 PARAMETRES :
 
@@ -38,7 +38,7 @@ Dégâts : 1d10 +4, +1d4 dégâts supplémentaires de feu
 Type de dégâts : perforants
 Poids : 12
 Facteur de vitesse : 6
-Type de competence : hallebarde
+Type de compétence : hallebarde
 Type : arme à 2 mains
 Force nécessaire : 13
 Non utilisable par :

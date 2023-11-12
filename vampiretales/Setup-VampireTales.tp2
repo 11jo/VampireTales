@@ -579,7 +579,7 @@ COPY ~vampiretales/harper/items/CMG2AX03.itm~ ~override/CMG2AX03.itm~
 	SAY NAME1 @2002 
 	SAY NAME2 @2003
 	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_undesc_to_update = "@2004" END 
-	SAY DESC @2005
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@2005" END 
 
 COPY_EXISTING ~jaga1.CRE~	~override~ // Bessen
 	WRITE_SHORT 0x14 ~3000~ // XP value (lowered from 4500)
