@@ -4,7 +4,7 @@
 
 **Autor** : **Dark Raven**
 
-[Link to full readme](https://htmlpreview.github.io/?https://github.com/The-Gate-Project/VampireTales/blob/main/vampiretales/README.Github.html)
+[Link to full readme](https://htmlpreview.github.io/?https://github.com/The-Gate-Project/VampireTales/blob/main/vampiretales/README.html)
 
 [Link to Mod Forum]()
 
