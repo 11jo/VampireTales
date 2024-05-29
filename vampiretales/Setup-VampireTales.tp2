@@ -1,21 +1,24 @@
-BACKUP ~vampiretales/backup~
+BACKUP ~weidu_external/vampiretales/backup~
 AUTHOR ~"http://www.chosenofmystra.com"~
 
 VERSION ~v106~
 
 README ~vampiretales/README.html~
 
-ALWAYS	
+ALWAYS
+
+//
+	INCLUDE ~vampiretales/lib/gw_functions.tpa~	
 
 			//Copies tra files into the autotra-folder (to leave the originals untouched)
     DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
-      COPY ~vampiretales/language/american~  ~vampiretales/language/autotra/%LANGUAGE%~
-      COPY ~vampiretales/language/%LANGUAGE%~  ~vampiretales/language/autotra/%LANGUAGE%~
+      COPY ~vampiretales/language/american~  ~weidu_external/vampiretales/language/autotra/%LANGUAGE%~
+      COPY ~vampiretales/language/%LANGUAGE%~  ~weidu_external/vampiretales/language/autotra/%LANGUAGE%~
     END
 
     LAF autotra_workaround END
 
-
+	ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
 //  ACTION_DEFINE_ARRAY fl#noconvert BEGIN END
 
  ACTION_DEFINE_ARRAY fl#reload BEGIN setup harper comstore END
@@ -24,17 +27,19 @@ ALWAYS
       INT_VAR
         infer_charsets = 1
       STR_VAR
-        tra_path = EVAL ~vampiretales/language/autotra~
+        tra_path = EVAL ~weidu_external/vampiretales/language/autotra~
+        out_path = EVAL ~weidu_external/vampiretales/language/autotra/UTF8~
+		iconv_path = ~vampiretales/language/autotra/iconv~
 //        noconvert_array = fl#noconvert
         reload_array = fl#reload
 	END
-
-//
-INCLUDE ~vampiretales/lib/gw_functions.tpa~
+   COPY ~weidu_external/vampiretales/language/autotra/%LANGUAGE%~ ~weidu_external/vampiretales/language/autotra/ANSI/%LANGUAGE%~
+   COPY ~weidu_external/vampiretales/language/autotra/UTF8/%LANGUAGE%~ ~weidu_external/vampiretales/language/autotra/%LANGUAGE%~
+  END
 
 END
 
-AUTO_TRA ~vampiretales/language/autotra/%s~
+AUTO_TRA ~weidu_external/vampiretales/language/autotra/%s~
 
 LANGUAGE ~American English~ ~american~ 
          ~vampiretales/language/american/setup.tra~
@@ -455,46 +460,43 @@ COMPILE
 
 
 COMPILE ~vampiretales/dlg/bcmgmi25.d~
-   USING ~vampiretales/language/autotra/%s/bcmgmi25.tra~
+   USING ~weidu_external/vampiretales/language/autotra/%s/bcmgmi25.tra~
 
 COMPILE ~vampiretales/dlg/bcmgmiri.d~
-    USING ~vampiretales/language/autotra/%s/bcmgmiri.tra~
+    USING ~weidu_external/vampiretales/language/autotra/%s/bcmgmiri.tra~
 
 COMPILE ~vampiretales/dlg/cmgmi25.d~
-   USING ~vampiretales/language/autotra/%s/cmgmi25.tra~
+   USING ~weidu_external/vampiretales/language/autotra/%s/cmgmi25.tra~
 
 COMPILE ~vampiretales/dlg/cmgmi25j.d~
-   USING ~vampiretales/language/autotra/%s/cmgmi25j.tra~
+   USING ~weidu_external/vampiretales/language/autotra/%s/cmgmi25j.tra~
 
 COMPILE ~vampiretales/dlg/cmgmiri.d~
-   USING ~vampiretales/language/autotra/%s/cmgmiri.tra~
+   USING ~weidu_external/vampiretales/language/autotra/%s/cmgmiri.tra~
 
 COMPILE ~vampiretales/dlg/cmgmirij.d~
-   USING ~vampiretales/language/autotra/%s/cmgmirij.tra~
+   USING ~weidu_external/vampiretales/language/autotra/%s/cmgmirij.tra~
 
 COMPILE ~vampiretales/dlg/cmgmirip.d~
-   USING ~vampiretales/language/autotra/%s/cmgmirip.tra~
+   USING ~weidu_external/vampiretales/language/autotra/%s/cmgmirip.tra~
 
 COMPILE ~vampiretales/dlg/cmgblood.d~       
-  USING ~vampiretales/language/autotra/%s/cmgblood.tra~
+  USING ~weidu_external/vampiretales/language/autotra/%s/cmgblood.tra~
 
 COMPILE ~vampiretales/dlg/cmlilith.d~       
-  USING ~vampiretales/language/autotra/%s/cmlilith.tra~
+  USING ~weidu_external/vampiretales/language/autotra/%s/cmlilith.tra~
 
 COMPILE ~vampiretales/dlg/cmmarial.d~       
-  USING ~vampiretales/language/autotra/%s/cmmarial.tra~
+  USING ~weidu_external/vampiretales/language/autotra/%s/cmmarial.tra~
 
 COMPILE ~vampiretales/dlg/cmgratav.d~       
-  USING ~vampiretales/language/autotra/%s/cmgratav.tra~
+  USING ~weidu_external/vampiretales/language/autotra/%s/cmgratav.tra~
 
 //COMPILE ~vampiretales/dlg/aabanter.d~       
-//  USING ~vampiretales/language/autotra/%s/aabanter.tra~
+//  USING ~weidu_external/vampiretales/language/autotra/%s/aabanter.tra~
 
 COMPILE ~vampiretales/dlg/drvamps.d~
-  USING ~vampiretales/language/autotra/%s/drvamps.tra~
-  
-COMPILE ~vampiretales/comstore/dlg/asgrim.d~       
-  USING ~vampiretales/language/autotra/%s/asgrim.tra~
+  USING ~weidu_external/vampiretales/language/autotra/%s/drvamps.tra~
 
 // Beginning of .2DA patching
 
@@ -520,7 +522,7 @@ BEGIN @239
 LABEL ~Dark_Raven-Improved_Cult~
 
 COPY_EXISTING ~BHCAPT01.CRE~	~override~ // Capitaine des gardes d'élite
-	WRITE_SHORT 0x14 ~3000~ // XP value (lowered from 4500)
+	WRITE_LONG 0x14 ~3000~ // XP value (lowered from 4500)
 	WRITE_BYTE 0x52 ~11~  // THACO
 	WRITE_BYTE 0x53 ~8~  // attacks/round 5/2 (8)
 	REPLACE_CRE_ITEM ~PLAT04~ #0 #0 #0 ~unstealable~ ~armor~
@@ -529,7 +531,7 @@ COPY_EXISTING ~BHCAPT01.CRE~	~override~ // Capitaine des gardes d'élite
 	ADD_CRE_ITEM ~BOLT01~ #20 #0 #0 ~unstealable~ ~quiver2~
 
 COPY_EXISTING ~BHGUARD.CRE~	~override~ // Garde d'élite
-	WRITE_SHORT 0x14 ~2500~ // XP value (lowered from 3200)
+	WRITE_LONG 0x14 ~2500~ // XP value (lowered from 3200)
 	WRITE_SHORT 0x1c ~30~ // Gold
 	WRITE_SHORT 0x46 ~3~  // Natural AC
 	WRITE_SHORT 0x48 ~3~  // Effective AC
@@ -540,7 +542,7 @@ COPY_EXISTING ~BHGUARD.CRE~	~override~ // Garde d'élite
 	REPLACE_CRE_ITEM ~XBOW01~ #0 #0 #0 ~unstealable~ ~weapon2~ EQUIP TWOHANDED
 
 COPY_EXISTING ~BHGUARD2.CRE~	~override~ // Garde d'élite
-	WRITE_SHORT 0x14 ~2500~ // XP value (lowered from 3500)
+	WRITE_LONG 0x14 ~2500~ // XP value (lowered from 3500)
 	WRITE_SHORT 0x46 ~2~  // Natural AC
 	WRITE_SHORT 0x48 ~2~  // Effective AC
 	WRITE_BYTE 0x52 ~6~  // THACO
@@ -550,13 +552,13 @@ COPY_EXISTING ~BHGUARD2.CRE~	~override~ // Garde d'élite
 	REPLACE_CRE_ITEM ~XBOW01~ #0 #0 #0 ~unstealable~ ~weapon2~ EQUIP TWOHANDED
 
 COPY_EXISTING ~CULTBH3.CRE~	~override~ // Tyrannœil
-	WRITE_SHORT 0x14 ~10000~ // XP value (lowered from 12000)
+	WRITE_LONG 0x14 ~10000~ // XP value (lowered from 12000)
 	WRITE_SHORT 0x24 ~66~ // Current HP
 	WRITE_SHORT 0x26 ~66~ // Maximum HP
 	WRITE_BYTE 0x53 ~2~  // attacks/round 2 (2)
 
 COPY_EXISTING ~THESHAL.CRE~	~override~ // Theshal
-	WRITE_SHORT 0x14 ~2500~ // XP value (lowered from 4050)
+	WRITE_LONG 0x14 ~2500~ // XP value (lowered from 4050)
 	WRITE_SHORT 0x24 ~58~ // Current HP
 	WRITE_SHORT 0x26 ~58~ // Maximum HP
 	WRITE_BYTE 0x52 ~10~  // THACO
@@ -582,7 +584,7 @@ COPY ~vampiretales/harper/items/CMG2AX03.itm~ ~override/CMG2AX03.itm~
 	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@2005" END 
 
 COPY_EXISTING ~jaga1.CRE~	~override~ // Bessen
-	WRITE_SHORT 0x14 ~3000~ // XP value (lowered from 4500)
+	WRITE_LONG 0x14 ~3000~ // XP value (lowered from 4500)
 	WRITE_SHORT 0x24 ~48~ // Current HP
 	WRITE_SHORT 0x26 ~48~ // Maximum HP
 	WRITE_BYTE 0x52 ~14~  // THACO
@@ -597,14 +599,14 @@ COPY_EXISTING ~jaga1.CRE~	~override~ // Bessen
 	ADD_CRE_ITEM ~POTN52~ #5 #0 #0 ~unstealable~ ~qitem3~
 
 COPY_EXISTING ~jaga2.CRE~	~override~ // Kail
-	//WRITE_SHORT 0x14 ~3000~ // XP value (lowered from 4000)
+	//WRITE_LONG 0x14 ~3000~ // XP value (lowered from 4000)
 	WRITE_BYTE 0x27b ~18~  // Alignement (LAWFUL_NEUTRAL - 18)
 	ADD_CRE_ITEM ~SW1H49~ #0 #0 #0 ~unstealable~ ~shield~
 	REPLACE_CRE_ITEM ~SW1H55~ #20 #0 #0 ~unstealable~ ~weapon1~ EQUIP
 	ADD_CRE_ITEM ~POTN14~ #5 #0 #0 ~unstealable~ ~qitem1~
 
 COPY_EXISTING ~jaga3.CRE~	~override~ // Nadinal
-	WRITE_SHORT 0x14 ~2000~ // XP value
+	WRITE_LONG 0x14 ~2000~ // XP value
 	WRITE_SHORT 0x1c ~10~ // Gold
 	WRITE_SHORT 0x24 ~43~ // Current HP
 	WRITE_SHORT 0x26 ~43~ // Maximum HP
@@ -620,7 +622,7 @@ COPY_EXISTING ~jaga3.CRE~	~override~ // Nadinal
 	REPLACE_CRE_ITEM ~STAF24~ #0 #0 #0 ~unstealable~ ~weapon1~ EQUIP
 
 COPY_EXISTING ~jaga4.CRE~	~override~ // Iko
-	WRITE_SHORT 0x14 ~3500~ // XP value (lowered from 4500)
+	WRITE_LONG 0x14 ~3500~ // XP value (lowered from 4500)
 	WRITE_BYTE 0x52 ~12~  // THACO
 	WRITE_BYTE 0x53 ~2~  // attacks/round 2 (2)
 	WRITE_BYTE 0x27b ~35~  // Alignement (NEUTRAL_EVIL - 35)
@@ -632,7 +634,7 @@ COPY_EXISTING ~jaga4.CRE~	~override~ // Iko
 	REPLACE_CRE_ITEM ~POTN52~ #5 #0 #0 ~unstealable~ ~qitem2~
 
 COPY_EXISTING ~jagalvar.CRE~	~override~ // Galvarey
-	WRITE_SHORT 0x14 ~5000~ // XP value (lowered from 6000)
+	WRITE_LONG 0x14 ~5000~ // XP value (lowered from 6000)
 	WRITE_SHORT 0x1c ~670~ // Gold
 	WRITE_BYTE 0x53 ~9~  // attacks/round 7/2 (9)
 	REPLACE_CRE_ITEM ~PLAT02~ #0 #0 #0 ~unstealable~ ~armor~
@@ -710,18 +712,13 @@ COPY    ~vampiretales/comstore/items/gcmsh01.itm~   ~override/gcmsh01.itm~
 // COPY    ~vampiretales/comstore/items/gcmsh02.itm~   ~override/gcmsh02.itm~ SAY NAME2 @29 SAY DESC @30
 
 COPY	~vampiretales/comstore/cre/gcmdwar1.cre~	~override/gcmdwar1.cre~	
-	SAY NAME1 @31 
-	SAY NAME2 @31 
-
+	SAY NAME1 @31
+	SAY NAME2 @31
+  
+COMPILE ~vampiretales/comstore/dlg/asgrim.d~       
+  USING ~weidu_external/vampiretales/language/autotra/%s/asgrim.tra~
 
 EXTEND_TOP ~ar0406.bcs~ ~vampiretales/comstore/script/add.baf~
 
 COPY    ~vampiretales/comstore/store/gcmstore.sto~     ~override/gcmstore.sto~
 	SAY STORE_NAME @32
-
-
-
-
-
-
-
