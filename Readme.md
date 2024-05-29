@@ -85,6 +85,14 @@ A: Originally this mod was Dark Ritual and Miriam as seperate mods. I combined t
 ## VERSION HISTORY
 ------------------
 
+- Version 1.07 (May, 2024)
+
+    CHANGES       
+	
+	- Comstore componant fully independant   
+	- Some WRITE_SHORT to WRITE_LONG    
+
+
 - Version 1.06 (October, 2023)
 
     CHANGES       
