@@ -64,6 +64,12 @@ LANGUAGE ~French (Translation by Shaywen and Zooloo (of the d'Oghmatiques))~
          ~vampiretales/language/french/harper.tra~
          ~vampiretales/language/french/comstore.tra~
 
+LANGUAGE ~Russian (Translation by yota13)~
+         ~russian~
+         ~vampiretales/language/russian/setup.tra~
+         ~vampiretales/language/russian/harper.tra~
+         ~vampiretales/language/russian/comstore.tra~
+
 BEGIN @237
 LABEL ~Dark_Raven-Vampire_Tales_Main~
 REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee eet~ ~You must have ToB, BGT, BG2:EE or EET installed to install this mod.~
