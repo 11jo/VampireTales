@@ -81,6 +81,30 @@ THAC0: +3
 
 Вес: 10~
 
+@13 = ~Fire's Edge~
+
+@14 = ~Fire's Edge was a creation of a derro dwarf in the Underdark. He had a thing with fire and all his weapons were crafted to do fire damage. He met his fate, as rumours go, in the frozen Dalelands of the North.
+
+STATISTICS:
+
+Combat Ability: 2d4 fire damage 
+Damage: 3D6 +3
+THAC0 +3
+Damage type (melee): slashing
+Damage type (thrown): missile (piercing)
+Special: Returns to user's hand once thrown
+Weight: 2
+Speed Factor: 1
+Proficiency Type: Axe
+Type: 1-handed
+Requires: 4 Strength
+Not Usable By:
+Good Characters
+Druid
+Cleric
+Mage
+Thief~
+
 @15 = ~Эльфийская Кольчуга руки +3~
 
 @16 = ~В золотой век между эльфами Селдарина и гномами глубин Дорна была изготовлена специальная версия прославленной эльфийской кольчуги, которая защищала от суровых погодных условий севера.
