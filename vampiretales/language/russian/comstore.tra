@@ -81,29 +81,25 @@ THAC0: +3
 
 Вес: 10~
 
-@13 = ~Fire's Edge~
+@13 = ~Огненная грань~
 
-@14 = ~Fire's Edge was a creation of a derro dwarf in the Underdark. He had a thing with fire and all his weapons were crafted to do fire damage. He met his fate, as rumours go, in the frozen Dalelands of the North.
+@14 = ~Огненная грань была творением дерро дварфа из Андердарка. Он был неравнодушен к пламени, и все его оружие было создано для нанесения урона огнем. По слухам, он встретил свою судьбу в мерзлых землях северных долин.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Combat Ability: 2d4 fire damage 
-Damage: 3D6 +3
-THAC0 +3
-Damage type (melee): slashing
-Damage type (thrown): missile (piercing)
-Special: Returns to user's hand once thrown
-Weight: 2
-Speed Factor: 1
-Proficiency Type: Axe
-Type: 1-handed
-Requires: 4 Strength
-Not Usable By:
-Good Characters
-Druid
-Cleric
-Mage
-Thief~
+Боевые особенности: 2d4 урона огнем
+Урон: 3D6 +3
+THAC0: +3
+Тип урона (ближний бой): рубящий
+Тип урона (метательный): колющий
+Особенности: Возвращается в руку владельца после броска
+Фактор скорости: 1
+Оружейный навык: Топор
+Тип: одноручное
+Требуется:
+Сила 4
+
+Вес: 2~
 
 @15 = ~Эльфийская Кольчуга руки +3~
 
