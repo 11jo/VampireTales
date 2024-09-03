@@ -85,6 +85,13 @@ A: Originally this mod was Dark Ritual and Miriam as seperate mods. I combined t
 ## VERSION HISTORY
 ------------------
 
+- Version 1.08 (September, 2024)
+
+    CHANGES       
+	
+	- Russian translation  
+	- Little corrections for creatures   
+
 - Version 1.07 (May, 2024)
 
     CHANGES       
