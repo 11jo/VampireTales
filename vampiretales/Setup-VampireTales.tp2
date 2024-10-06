@@ -19,7 +19,7 @@ ALWAYS
     LAF autotra_workaround END
 
 	ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
-//  ACTION_DEFINE_ARRAY fl#noconvert BEGIN END
+ACTION_DEFINE_ARRAY fl#noconvert BEGIN install END
 
  ACTION_DEFINE_ARRAY fl#reload BEGIN setup harper comstore END
 
@@ -30,7 +30,7 @@ ALWAYS
         tra_path = EVAL ~weidu_external/vampiretales/language/autotra~
         out_path = EVAL ~weidu_external/vampiretales/language/autotra/UTF8~
 		iconv_path = ~vampiretales/language/autotra/iconv~
-//        noconvert_array = fl#noconvert
+        noconvert_array = fl#noconvert
         reload_array = fl#reload
 	END
    COPY ~weidu_external/vampiretales/language/autotra/%LANGUAGE%~ ~weidu_external/vampiretales/language/autotra/ANSI/%LANGUAGE%~
@@ -69,6 +69,14 @@ LANGUAGE ~Russian (Translation by yota13)~
          ~vampiretales/language/russian/setup.tra~
          ~vampiretales/language/russian/harper.tra~
          ~vampiretales/language/russian/comstore.tra~
+
+LANGUAGE ~Simplified Chinese (Translation By Lzw104522773)~
+         ~schinese~
+         ~vampiretales/language/schinese/setup.tra~
+         ~vampiretales/language/schinese/install.tra~
+        ~vampiretales/language/schinese/harper.tra~
+         ~vampiretales/language/schinese/comstore.tra~
+
 
 BEGIN @237
 LABEL ~Dark_Raven-Vampire_Tales_Main~
@@ -349,7 +357,7 @@ COPY ~vampiretales/items/CMGDAG02.itm~ ~override/CMGDAG02.itm~
 
 COPY ~vampiretales/items/CMGVAMP.itm~  ~override/CMGVAMP.itm~        
 
-COPY ~vampiretales/items/CMGCLMYS.ITM~ ~override/CMGCLMYS.ITM~     // description à revoir
+COPY ~vampiretales/items/CMGCLMYS.ITM~ ~override/CMGCLMYS.ITM~     // description   revoir
   SAY NAME2 #10080 
   SAY DESC #10037           
 
@@ -357,7 +365,7 @@ COPY ~vampiretales/items/CMGWEMYS.ITM~ ~override/CMGWEMYS.ITM~
   SAY NAME2 @152
    
 
-COPY ~vampiretales/items/CMGRIMYS.ITM~ ~override/CMGRIMYS.ITM~           // description à revoir
+COPY ~vampiretales/items/CMGRIMYS.ITM~ ~override/CMGRIMYS.ITM~           // description   revoir
 
 COPY ~vampiretales/items/CMGFORG2.itm~ ~override/CMGFORG2.itm~       
   SAY NAME2 @153 
@@ -527,7 +535,7 @@ UNLESS ~CMGMIRIAM~
 BEGIN @239
 LABEL ~Dark_Raven-Improved_Cult~
 
-COPY_EXISTING ~BHCAPT01.CRE~	~override~ // Capitaine des gardes d'élite
+COPY_EXISTING ~BHCAPT01.CRE~	~override~ // Capitaine des gardes d' lite
 	WRITE_LONG 0x14 ~3000~ // XP value (lowered from 4500)
 	WRITE_BYTE 0x52 ~11~  // THACO
 	WRITE_BYTE 0x53 ~8~  // attacks/round 5/2 (8)
@@ -536,7 +544,7 @@ COPY_EXISTING ~BHCAPT01.CRE~	~override~ // Capitaine des gardes d'élite
 	REPLACE_CRE_ITEM ~BOLT04~ #40 #0 #0 ~unstealable~ ~quiver1~
 	ADD_CRE_ITEM ~BOLT01~ #20 #0 #0 ~unstealable~ ~quiver2~
 
-COPY_EXISTING ~BHGUARD.CRE~	~override~ // Garde d'élite
+COPY_EXISTING ~BHGUARD.CRE~	~override~ // Garde d' lite
 	WRITE_LONG 0x14 ~2500~ // XP value (lowered from 3200)
 	WRITE_SHORT 0x1c ~30~ // Gold
 	WRITE_SHORT 0x46 ~3~  // Natural AC
@@ -547,7 +555,7 @@ COPY_EXISTING ~BHGUARD.CRE~	~override~ // Garde d'élite
 	REPLACE_CRE_ITEM ~BOLT01~ #20 #0 #0 ~unstealable~ ~quiver2~
 	REPLACE_CRE_ITEM ~XBOW01~ #0 #0 #0 ~unstealable~ ~weapon2~ EQUIP TWOHANDED
 
-COPY_EXISTING ~BHGUARD2.CRE~	~override~ // Garde d'élite
+COPY_EXISTING ~BHGUARD2.CRE~	~override~ // Garde d' lite
 	WRITE_LONG 0x14 ~2500~ // XP value (lowered from 3500)
 	WRITE_SHORT 0x46 ~2~  // Natural AC
 	WRITE_SHORT 0x48 ~2~  // Effective AC
@@ -557,7 +565,7 @@ COPY_EXISTING ~BHGUARD2.CRE~	~override~ // Garde d'élite
 	REPLACE_CRE_ITEM ~BOLT01~ #20 #0 #0 ~unstealable~ ~quiver2~
 	REPLACE_CRE_ITEM ~XBOW01~ #0 #0 #0 ~unstealable~ ~weapon2~ EQUIP TWOHANDED
 
-COPY_EXISTING ~CULTBH3.CRE~	~override~ // Tyrannœil
+COPY_EXISTING ~CULTBH3.CRE~	~override~ // Tyrann il
 	WRITE_LONG 0x14 ~10000~ // XP value (lowered from 12000)
 	WRITE_SHORT 0x24 ~66~ // Current HP
 	WRITE_SHORT 0x26 ~66~ // Maximum HP
